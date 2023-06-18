@@ -1,0 +1,4317 @@
+{
+  "version": "0.1.0",
+  "types": {
+    "peripherals": {
+      "PORTB": {
+        "children": {
+          "registers": {
+            "PIN": {
+              "description": "Port B Input Pins Address",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "P7": {
+                    "description": "Pin 7 Input",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P6": {
+                    "description": "Pin 6 Input",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P5": {
+                    "description": "Pin 5 Input",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P4": {
+                    "description": "Pin 4 Input",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P3": {
+                    "description": "Pin 3 Input",
+                    "offset": 3,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P2": {
+                    "description": "Pin 2 Input",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P1": {
+                    "description": "Pin 1 Input",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P0": {
+                    "description": "Pin 0 Input",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "DDR": {
+              "description": "Port B Data Direction Register",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "DD7": {
+                    "description": "Pin 7 Direction",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD6": {
+                    "description": "Pin 6 Direction",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD5": {
+                    "description": "Pin 5 Direction",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD4": {
+                    "description": "Pin 4 Direction",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD3": {
+                    "description": "Pin 3 Direction",
+                    "offset": 3,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD2": {
+                    "description": "Pin 2 Direction",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD1": {
+                    "description": "Pin 1 Direction",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD0": {
+                    "description": "Pin 0 Direction",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "PORT": {
+              "description": "Port B Output/Data Register",
+              "offset": 2,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "D7": {
+                    "description": "Pin 7 Output/Data",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D6": {
+                    "description": "Pin 6 Output/Data",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D5": {
+                    "description": "Pin 5 Output/Data",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D4": {
+                    "description": "Pin 4 Output/Data",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D3": {
+                    "description": "Pin 3 Output/Data",
+                    "offset": 3,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D2": {
+                    "description": "Pin 2 Output/Data",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D1": {
+                    "description": "Pin 1 Output/Data",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D0": {
+                    "description": "Pin 0 Output/Data",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PORTC": {
+        "children": {
+          "registers": {
+            "PIN": {
+              "description": "Port C Input Pins Address",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "P7": {
+                    "description": "Pin 7 Input",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P6": {
+                    "description": "Pin 6 Input",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "DDR": {
+              "description": "Port C Data Direction Register",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "DD7": {
+                    "description": "Pin 7 Direction",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD6": {
+                    "description": "Pin 6 Direction",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "PORT": {
+              "description": "Port C Output/Data Register",
+              "offset": 2,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "D7": {
+                    "description": "Pin 7 Output/Data",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D6": {
+                    "description": "Pin 6 Output/Data",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PORTD": {
+        "children": {
+          "registers": {
+            "PIN": {
+              "description": "Port D Input Pins Address",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "P7": {
+                    "description": "Pin 7 Input",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P6": {
+                    "description": "Pin 6 Input",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P5": {
+                    "description": "Pin 5 Input",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P4": {
+                    "description": "Pin 4 Input",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P3": {
+                    "description": "Pin 3 Input",
+                    "offset": 3,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P2": {
+                    "description": "Pin 2 Input",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P1": {
+                    "description": "Pin 1 Input",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P0": {
+                    "description": "Pin 0 Input",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "DDR": {
+              "description": "Port D Data Direction Register",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "DD7": {
+                    "description": "Pin 7 Direction",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD6": {
+                    "description": "Pin 6 Direction",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD5": {
+                    "description": "Pin 5 Direction",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD4": {
+                    "description": "Pin 4 Direction",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD3": {
+                    "description": "Pin 3 Direction",
+                    "offset": 3,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD2": {
+                    "description": "Pin 2 Direction",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD1": {
+                    "description": "Pin 1 Direction",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD0": {
+                    "description": "Pin 0 Direction",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "PORT": {
+              "description": "Port D Output/Data Register",
+              "offset": 2,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "D7": {
+                    "description": "Pin 7 Output/Data",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D6": {
+                    "description": "Pin 6 Output/Data",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D5": {
+                    "description": "Pin 5 Output/Data",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D4": {
+                    "description": "Pin 4 Output/Data",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D3": {
+                    "description": "Pin 3 Output/Data",
+                    "offset": 3,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D2": {
+                    "description": "Pin 2 Output/Data",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D1": {
+                    "description": "Pin 1 Output/Data",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D0": {
+                    "description": "Pin 0 Output/Data",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PORTE": {
+        "children": {
+          "registers": {
+            "PIN": {
+              "description": "Port E Input Pins Address",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "P6": {
+                    "description": "Pin 6 Input",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P2": {
+                    "description": "Pin 2 Input",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "DDR": {
+              "description": "Port E Data Direction Register",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "DD6": {
+                    "description": "Pin 6 Direction",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD2": {
+                    "description": "Pin 2 Direction",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "PORT": {
+              "description": "Port E Output/Data Register",
+              "offset": 2,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "D6": {
+                    "description": "Pin 6 Output/Data",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D2": {
+                    "description": "Pin 2 Output/Data",
+                    "offset": 2,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PORTF": {
+        "children": {
+          "registers": {
+            "PIN": {
+              "description": "Port F Input Pins Address",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "P7": {
+                    "description": "Pin 7 Input",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P6": {
+                    "description": "Pin 6 Input",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P5": {
+                    "description": "Pin 5 Input",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P4": {
+                    "description": "Pin 4 Input",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P1": {
+                    "description": "Pin 1 Input",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "P0": {
+                    "description": "Pin 0 Input",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "DDR": {
+              "description": "Port F Data Direction Register",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "DD7": {
+                    "description": "Pin 7 Direction",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD6": {
+                    "description": "Pin 6 Direction",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD5": {
+                    "description": "Pin 5 Direction",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD4": {
+                    "description": "Pin 4 Direction",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD1": {
+                    "description": "Pin 1 Direction",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DD0": {
+                    "description": "Pin 0 Direction",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "INPUT": {
+                            "description": "Pin is configured as an input",
+                            "value": 0
+                          },
+                          "OUTPUT": {
+                            "description": "Pin is configured as an output",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "PORT": {
+              "description": "Port F Output/Data Register",
+              "offset": 2,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "D7": {
+                    "description": "Pin 7 Output/Data",
+                    "offset": 7,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D6": {
+                    "description": "Pin 6 Output/Data",
+                    "offset": 6,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D5": {
+                    "description": "Pin 5 Output/Data",
+                    "offset": 5,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D4": {
+                    "description": "Pin 4 Output/Data",
+                    "offset": 4,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D1": {
+                    "description": "Pin 1 Output/Data",
+                    "offset": 1,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "D0": {
+                    "description": "Pin 0 Output/Data",
+                    "offset": 0,
+                    "size": 1,
+                    "enum": {
+                      "size": 1,
+                      "children": {
+                        "enum_fields": {
+                          "LOW": {
+                            "description": "Pin is low",
+                            "value": 0
+                          },
+                          "HIGH": {
+                            "description": "Pin is high",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "TIMER0": {
+        "description": "8-Bit Timer/Counter0 with PWM",
+        "children": {
+          "registers": {
+            "TIFR": {
+              "description": "Timer Interrupt Flag Register",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "OCF_B": {
+                    "description": "Output Compare B Match Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCF_A": {
+                    "description": "Output Compare A Match Flag",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TOV": {
+                    "description": "Timer Overflow Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TCCR_A": {
+              "description": "Timer/Counter Control Register A",
+              "offset": 15,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "COM_A": {
+                    "description": "Compare Match Output A Mode",
+                    "offset": 6,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC0x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC0x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC0x on Compare Match (If PWM is enabled, OC0x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC0x on Compare Match (If PWM is enabled, OC0x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_B": {
+                    "description": "Compare Match Output B Mode",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC0x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC0x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC0x on Compare Match (If PWM is enabled, OC0x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC0x on Compare Match (If PWM is enabled, OC0x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "WGM0": {
+                    "description": "Waveform Generation Mode Bits 1:0",
+                    "offset": 0,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "NORMAL_TOP": {
+                            "description": "Normal, Top: `0xff`, Update: *Immediate*, Flag: *MAX*",
+                            "value": 0
+                          },
+                          "PWM_PHASE": {
+                            "description": "Phase Correct PWM, Top: `0xff`, Update: *TOP*, Flag: *BOTTOM*",
+                            "value": 1
+                          },
+                          "CTC": {
+                            "description": "CTC, Top: *OCRA*, Update: *Immediate*, Flag: *MAX*",
+                            "value": 2
+                          },
+                          "PWM_FAST": {
+                            "description": "Fast PWM, Top: `0xff`, Update: *TOP*, Flag: *MAX*",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "TCCR_B": {
+              "description": "Timer/Counter Control Register B",
+              "offset": 16,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "FOC_A": {
+                    "description": "Force Output Compare A",
+                    "offset": 7,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "FOC_B": {
+                    "description": "Force Output Compare B",
+                    "offset": 6,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "WGM2": {
+                    "description": "Waveform Generation Mode Bit 2 (Enable Top: *OCRA* for PWM modes)",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "CS": {
+                    "description": "Clock Select",
+                    "offset": 0,
+                    "size": 3,
+                    "enum": {
+                      "size": 3,
+                      "children": {
+                        "enum_fields": {
+                          "STOPPED": {
+                            "description": "No clock source (Timer/Counter stopped)",
+                            "value": 0
+                          },
+                          "IO": {
+                            "description": "clkIO/1 (No prescaling)",
+                            "value": 1
+                          },
+                          "IO_8": {
+                            "description": "clkIO/8 (From prescaler)",
+                            "value": 2
+                          },
+                          "IO_64": {
+                            "description": "clkIO/64 (From prescaler)",
+                            "value": 3
+                          },
+                          "IO_256": {
+                            "description": "clkIO/256 (From prescaler)",
+                            "value": 4
+                          },
+                          "IO_1024": {
+                            "description": "clkIO/1024 (From prescaler)",
+                            "value": 5
+                          },
+                          "EXT_FALLING": {
+                            "description": "External clock source on T0 pin. Clock on falling edge.",
+                            "value": 6
+                          },
+                          "EXT_RISING": {
+                            "description": "External clock source on T0 pin. Clock on rising edge.",
+                            "value": 7
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "TCNT": {
+              "description": "Timer/Counter Register",
+              "offset": 17,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_A": {
+              "description": "Timer Output Compare Register A",
+              "offset": 18,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_B": {
+              "description": "Timer Output Compare Register B",
+              "offset": 19,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "TIMSK": {
+              "description": "Timer Interrupt Mask Register",
+              "offset": 57,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "OCIE_B": {
+                    "description": "Output Compare Match B Interrupt Enable",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCIE_A": {
+                    "description": "Output Compare Match A Interrupt Enable",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TOIE": {
+                    "description": "Timer Overflow Interrupt Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "TIMER1": {
+        "description": "16-Bit Timer/Counter1",
+        "children": {
+          "registers": {
+            "TIFR": {
+              "description": "Timer Interrupt Flag Register",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ICF": {
+                    "description": "Input Capture Flag",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "OCF_C": {
+                    "description": "Output Compare C Match Flag",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "OCF_B": {
+                    "description": "Output Compare B Match Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCF_A": {
+                    "description": "Output Compare A Match Flag",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TOV": {
+                    "description": "Timer Overflow Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TIMSK": {
+              "description": "Timer Interrupt Mask Register",
+              "offset": 57,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ICIE": {
+                    "description": "Input Capture Interrupt Enable",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "OCIE_C": {
+                    "description": "Output Compare Match C Interrupt Enable",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "OCIE_B": {
+                    "description": "Output Compare Match B Interrupt Enable",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCIE_A": {
+                    "description": "Output Compare Match A Interrupt Enable",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TOIE": {
+                    "description": "Timer Overflow Interrupt Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TCCR_A": {
+              "description": "Timer/Counter Control Register A",
+              "offset": 74,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "COM_A": {
+                    "description": "Compare Output Mode for Channel A",
+                    "offset": 6,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC1x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC1x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC1x on Compare Match (If PWM is enabled, OC1x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC1x on Compare Match (If PWM is enabled, OC1x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_B": {
+                    "description": "Compare Output Mode for Channel B",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC1x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC1x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC1x on Compare Match (If PWM is enabled, OC1x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC1x on Compare Match (If PWM is enabled, OC1x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_C": {
+                    "description": "Compare Output Mode for Channel C",
+                    "offset": 2,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC1x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC1x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC1x on Compare Match (If PWM is enabled, OC1x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC1x on Compare Match (If PWM is enabled, OC1x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "WGM0": {
+                    "description": "Waveform Generation Mode 1:0",
+                    "offset": 0,
+                    "size": 2
+                  }
+                }
+              }
+            },
+            "TCCR_B": {
+              "description": "Timer/Counter Control Register B",
+              "offset": 75,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ICNC": {
+                    "description": "Input Capture Noise Canceler",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "ICES": {
+                    "description": "Input Capture Edge Set",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "WGM2": {
+                    "description": "Waveform Generation Mode 3:2",
+                    "offset": 3,
+                    "size": 2
+                  },
+                  "CS": {
+                    "description": "Clock Select",
+                    "offset": 0,
+                    "size": 3,
+                    "enum": {
+                      "size": 3,
+                      "children": {
+                        "enum_fields": {
+                          "STOPPED": {
+                            "description": "No clock source (Timer/Counter stopped)",
+                            "value": 0
+                          },
+                          "IO": {
+                            "description": "clkIO/1 (No prescaling)",
+                            "value": 1
+                          },
+                          "IO_8": {
+                            "description": "clkIO/8 (From prescaler)",
+                            "value": 2
+                          },
+                          "IO_64": {
+                            "description": "clkIO/64 (From prescaler)",
+                            "value": 3
+                          },
+                          "IO_256": {
+                            "description": "clkIO/256 (From prescaler)",
+                            "value": 4
+                          },
+                          "IO_1024": {
+                            "description": "clkIO/1024 (From prescaler)",
+                            "value": 5
+                          },
+                          "EXT_FALLING": {
+                            "description": "External clock source on T0 pin. Clock on falling edge.",
+                            "value": 6
+                          },
+                          "EXT_RISING": {
+                            "description": "External clock source on T0 pin. Clock on rising edge.",
+                            "value": 7
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "TCCR_C": {
+              "description": "Timer/Counter Control Register C",
+              "offset": 76,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "FOC_A": {
+                    "description": "Force Output Compare for Channel A",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "FOC_B": {
+                    "description": "Force Output Compare for Channel B",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "FOC_C": {
+                    "description": "Force Output Compare for Channel C",
+                    "offset": 5,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TCNT_L": {
+              "description": "Timer/Counter Register Low Byte",
+              "offset": 78,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "TCNT_H": {
+              "description": "Timer/Counter Register High Byte",
+              "offset": 79,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "ICR_L": {
+              "description": "Input Capture Register Low Byte",
+              "offset": 80,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "ICR_H": {
+              "description": "Input Capture Register High Byte",
+              "offset": 81,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_A_L": {
+              "description": "Output Compare Register A Low Byte",
+              "offset": 82,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_A_H": {
+              "description": "Output Compare Register A High Byte",
+              "offset": 83,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_B_L": {
+              "description": "Output Compare Register B Low Byte",
+              "offset": 84,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_B_H": {
+              "description": "Output Compare Register B High Byte",
+              "offset": 85,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_C_L": {
+              "description": "Output Compare Register C Low Byte",
+              "offset": 86,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_C_H": {
+              "description": "Output Compare Register C High Byte",
+              "offset": 87,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            }
+          }
+        }
+      },
+      "TIMER3": {
+        "description": "16-Bit Timer/Counter3",
+        "children": {
+          "registers": {
+            "TIFR": {
+              "description": "Timer Interrupt Flag Register",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ICF": {
+                    "description": "Input Capture Flag",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "OCF_C": {
+                    "description": "Output Compare C Match Flag",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "OCF_B": {
+                    "description": "Output Compare B Match Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCF_A": {
+                    "description": "Output Compare A Match Flag",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TOV": {
+                    "description": "Timer Overflow Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TIMSK": {
+              "description": "Timer Interrupt Mask Register",
+              "offset": 57,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ICIE": {
+                    "description": "Input Capture Interrupt Enable",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "OCIE_C": {
+                    "description": "Output Compare Match C Interrupt Enable",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "OCIE_B": {
+                    "description": "Output Compare Match B Interrupt Enable",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCIE_A": {
+                    "description": "Output Compare Match A Interrupt Enable",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TOIE": {
+                    "description": "Timer Overflow Interrupt Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "ICR_L": {
+              "description": "Input Capture Register Low Byte",
+              "offset": 78,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "ICR_H": {
+              "description": "Input Capture Register High Byte",
+              "offset": 79,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "TCCR_A": {
+              "description": "Timer/Counter Control Register A",
+              "offset": 88,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "COM_A": {
+                    "description": "Compare Output Mode for Channel A",
+                    "offset": 6,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC3x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC3x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC3x on Compare Match (If PWM is enabled, OC3x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC3x on Compare Match (If PWM is enabled, OC3x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_B": {
+                    "description": "Compare Output Mode for Channel B",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC3x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC3x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC3x on Compare Match (If PWM is enabled, OC3x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC3x on Compare Match (If PWM is enabled, OC3x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_C": {
+                    "description": "Compare Output Mode for Channel C",
+                    "offset": 2,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC3x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC3x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC3x on Compare Match (If PWM is enabled, OC3x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC3x on Compare Match (If PWM is enabled, OC3x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "WGM0": {
+                    "description": "Waveform Generation Mode 1:0",
+                    "offset": 0,
+                    "size": 2
+                  }
+                }
+              }
+            },
+            "TCCR_B": {
+              "description": "Timer/Counter Control Register B",
+              "offset": 89,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ICNC": {
+                    "description": "Input Capture Noise Canceler",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "ICES": {
+                    "description": "Input Capture Edge Set",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "WGM2": {
+                    "description": "Waveform Generation Mode 3:2",
+                    "offset": 3,
+                    "size": 2
+                  },
+                  "CS": {
+                    "description": "Clock Select",
+                    "offset": 0,
+                    "size": 3,
+                    "enum": {
+                      "size": 3,
+                      "children": {
+                        "enum_fields": {
+                          "STOPPED": {
+                            "description": "No clock source (Timer/Counter stopped)",
+                            "value": 0
+                          },
+                          "IO": {
+                            "description": "clkIO/1 (No prescaling)",
+                            "value": 1
+                          },
+                          "IO_8": {
+                            "description": "clkIO/8 (From prescaler)",
+                            "value": 2
+                          },
+                          "IO_64": {
+                            "description": "clkIO/64 (From prescaler)",
+                            "value": 3
+                          },
+                          "IO_256": {
+                            "description": "clkIO/256 (From prescaler)",
+                            "value": 4
+                          },
+                          "IO_1024": {
+                            "description": "clkIO/1024 (From prescaler)",
+                            "value": 5
+                          },
+                          "EXT_FALLING": {
+                            "description": "External clock source on T0 pin. Clock on falling edge.",
+                            "value": 6
+                          },
+                          "EXT_RISING": {
+                            "description": "External clock source on T0 pin. Clock on rising edge.",
+                            "value": 7
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "TCCR_C": {
+              "description": "Timer/Counter Control Register C",
+              "offset": 90,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "FOC_A": {
+                    "description": "Force Output Compare for Channel A",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "FOC_B": {
+                    "description": "Force Output Compare for Channel B",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "FOC_C": {
+                    "description": "Force Output Compare for Channel C",
+                    "offset": 5,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TCNT_L": {
+              "description": "Timer/Counter Register Low Byte",
+              "offset": 92,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "TCNT_H": {
+              "description": "Timer/Counter Register High Byte",
+              "offset": 93,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_A_L": {
+              "description": "Output Compare Register A Low Byte",
+              "offset": 96,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_A_H": {
+              "description": "Output Compare Register A High Byte",
+              "offset": 97,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_B_L": {
+              "description": "Output Compare Register B Low Byte",
+              "offset": 98,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_B_H": {
+              "description": "Output Compare Register B High Byte",
+              "offset": 99,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_C_L": {
+              "description": "Output Compare Register C Low Byte",
+              "offset": 100,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_C_H": {
+              "description": "Output Compare Register C High Byte",
+              "offset": 101,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            }
+          }
+        }
+      },
+      "TIMER4": {
+        "description": "10-bit High Speed Timer/Counter4",
+        "children": {
+          "registers": {
+            "TIFR": {
+              "description": "Timer Interrupt Flag Register",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "OCF_D": {
+                    "description": "Output Compare Flag D",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "OCF_A": {
+                    "description": "Output Compare Flag A",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "OCF_B": {
+                    "description": "Output Compare Flag B",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "TOV": {
+                    "description": "Timer Overflow Flag",
+                    "offset": 2,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TIMSK": {
+              "description": "Timer Interrupt Mask Register",
+              "offset": 57,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "OCIE_D": {
+                    "description": "Output Compare Match D Interrupt Enable",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "OCIE_A": {
+                    "description": "Output Compare Match A Interrupt Enable",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "OCIE_B": {
+                    "description": "Output Compare Match B Interrupt Enable",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "TOIE": {
+                    "description": "Timer Overflow Interrupt Enable",
+                    "offset": 2,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "TCNT": {
+              "description": "Timer/Counter Register",
+              "offset": 133,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "TCH": {
+              "description": "Timer/Counter High Byte",
+              "offset": 134,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "TC10": {
+                    "description": "Additional MSB Bit for 11-Bit Access",
+                    "offset": 2,
+                    "size": 1,
+                    "access": "read-only"
+                  },
+                  "TC98": {
+                    "description": "Two MSB bits of the 10-bit accesses",
+                    "offset": 0,
+                    "size": 2
+                  }
+                }
+              }
+            },
+            "TCCR_A": {
+              "description": "Timer/Counter Control Register A",
+              "offset": 135,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "COM_A": {
+                    "description": "Compare Output Mode for Channel A",
+                    "offset": 6,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC4x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC4x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_B": {
+                    "description": "Compare Output Mode for Channel B",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC4x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC4x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "PWM_A": {
+                    "description": "Pulse Width Modulator A",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "PWM_B": {
+                    "description": "Pulse Width Modulator B",
+                    "offset": 0,
+                    "size": 1
+                  },
+                  "FOC_A": {
+                    "description": "Force Output Compare Match A",
+                    "offset": 3,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "FOC_B": {
+                    "description": "Force Output Compare Match B",
+                    "offset": 2,
+                    "size": 1,
+                    "access": "write-only"
+                  }
+                }
+              }
+            },
+            "TCCR_B": {
+              "description": "Timer/Counter Control Register B",
+              "offset": 136,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "PWM_X": {
+                    "description": "PWM Inversion Mode",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "DTPS": {
+                    "description": "Dead Time Prescaler",
+                    "offset": 4,
+                    "size": 2
+                  },
+                  "CS": {
+                    "description": "Clock Source",
+                    "offset": 0,
+                    "size": 4,
+                    "enum": {
+                      "size": 4,
+                      "children": {
+                        "enum_fields": {
+                          "STOPPED": {
+                            "description": "No clock source (Timer/Counter stopped)",
+                            "value": 0
+                          },
+                          "CLK": {
+                            "description": "clk/1 (No Prescaler)",
+                            "value": 1
+                          },
+                          "CLK_2": {
+                            "description": "clk/2",
+                            "value": 2
+                          },
+                          "CLK_4": {
+                            "description": "clk/4",
+                            "value": 3
+                          },
+                          "CLK_8": {
+                            "description": "clk/8",
+                            "value": 4
+                          },
+                          "CLK_16": {
+                            "description": "clk/16",
+                            "value": 5
+                          },
+                          "CLK_32": {
+                            "description": "clk/32",
+                            "value": 6
+                          },
+                          "CLK_64": {
+                            "description": "clk/64",
+                            "value": 7
+                          },
+                          "CLK_128": {
+                            "description": "clk/128",
+                            "value": 8
+                          },
+                          "CLK_256": {
+                            "description": "clk/256",
+                            "value": 9
+                          },
+                          "CLK_512": {
+                            "description": "clk/512",
+                            "value": 10
+                          },
+                          "CLK_1024": {
+                            "description": "clk/1024",
+                            "value": 11
+                          },
+                          "CLK_2048": {
+                            "description": "clk/2048",
+                            "value": 12
+                          },
+                          "CLK_4096": {
+                            "description": "clk/4096",
+                            "value": 13
+                          },
+                          "CLK_8192": {
+                            "description": "clk/8192",
+                            "value": 14
+                          },
+                          "CLK_16384": {
+                            "description": "clk/16384",
+                            "value": 15
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "PSR": {
+                    "description": "Prescaler Reset",
+                    "offset": 6,
+                    "size": 1,
+                    "access": "write-only"
+                  }
+                }
+              }
+            },
+            "TCCR_C": {
+              "description": "Timer/Counter Control Register C",
+              "offset": 137,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "COM_A": {
+                    "description": "Compare Output Mode for Channel A",
+                    "offset": 6,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC4x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC4x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_B": {
+                    "description": "Compare Output Mode for Channel B",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC4x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC4x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "COM_D": {
+                    "description": "Compare Output Mode for Channel D",
+                    "offset": 2,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "DISCONNECTED": {
+                            "description": "Normal port operation, OC4x disconnected",
+                            "value": 0
+                          },
+                          "MATCH_TOGGLE": {
+                            "description": "Toggle OC4x on Compare Match (Might depend on WGM)",
+                            "value": 1
+                          },
+                          "MATCH_CLEAR": {
+                            "description": "Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)",
+                            "value": 2
+                          },
+                          "MATCH_SET": {
+                            "description": "Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "PWM_D": {
+                    "description": "Pulse Width Modulator D",
+                    "offset": 0,
+                    "size": 1
+                  },
+                  "FOC_D": {
+                    "description": "Force Output Compare Match D",
+                    "offset": 1,
+                    "size": 1,
+                    "access": "write-only"
+                  }
+                }
+              }
+            },
+            "TCCR_D": {
+              "description": "Timer/Counter Control Register D",
+              "offset": 138,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "FPIE": {
+                    "description": "Fault Protection Interrupt Enable",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "FPEN": {
+                    "description": "Fault Protection Mode Enable",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "FPNC": {
+                    "description": "Fault Protection Noise Canceler",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "FPES": {
+                    "description": "Fault Protection Edge Select",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "FPAC": {
+                    "description": "Fault Protection Analog Comparator Enable",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "FPF": {
+                    "description": "Fault Protection Interrupt Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "WGM": {
+                    "description": "Waveform Generation Mode",
+                    "offset": 0,
+                    "size": 2
+                  }
+                }
+              }
+            },
+            "TCCR_E": {
+              "description": "Timer/Counter Control Register E",
+              "offset": 139,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "TLOCK": {
+                    "description": "Register Update Lock",
+                    "offset": 7,
+                    "size": 1,
+                    "access": "read-only"
+                  },
+                  "ENHC": {
+                    "description": "Enhanced Compare/PWM Mode",
+                    "offset": 6,
+                    "size": 1,
+                    "access": "read-only"
+                  },
+                  "OCOE5": {
+                    "description": "Output Compare Override Enable (PD7)",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "OCOE4": {
+                    "description": "Output Compare Override Enable (PD6)",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "OCOE3": {
+                    "description": "Output Compare Override Enable (PB6)",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "OCOE2": {
+                    "description": "Output Compare Override Enable (PB5)",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "OCOE1": {
+                    "description": "Output Compare Override Enable (PC7)",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "OCOE0": {
+                    "description": "Output Compare Override Enable (PC6)",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "OCR_A": {
+              "description": "Output Compare Register A",
+              "offset": 150,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_B": {
+              "description": "Output Compare Register B",
+              "offset": 151,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_C": {
+              "description": "Output Compare Register B",
+              "offset": 152,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "OCR_D": {
+              "description": "Output Compare Register B",
+              "offset": 153,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "DT": {
+              "description": "Dead Time Value",
+              "offset": 155,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "DT_H": {
+                    "description": "Dead Time Value for OC4x Output",
+                    "offset": 4,
+                    "size": 4
+                  },
+                  "DT_L": {
+                    "description": "Dead Time Value for ~OC4x Output",
+                    "offset": 0,
+                    "size": 4
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "EXT_INT": {
+        "description": "External Interrupts",
+        "children": {
+          "registers": {
+            "EIFR": {
+              "description": "External Interrupt Flag Register",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "INTF6": {
+                    "description": "Interrupt 6 Flag",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "INTF3": {
+                    "description": "Interrupt 3 Flag",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "INTF2": {
+                    "description": "Interrupt 2 Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "INTF1": {
+                    "description": "Interrupt 1 Flag",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "INTF0": {
+                    "description": "Interrupt 0 Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "EIMSK": {
+              "description": "External Interrupt Mask Register",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "INT6": {
+                    "description": "Interrupt 6 Enable",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "INT3": {
+                    "description": "Interrupt 3 Enable",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "INT2": {
+                    "description": "Interrupt 2 Enable",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "INT1": {
+                    "description": "Interrupt 1 Enable",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "INT0": {
+                    "description": "Interrupt 0 Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "EICRA": {
+              "description": "External Interrupt Control Register A",
+              "offset": 45,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ISC3": {
+                    "description": "External Interrupt 3 Sense Control Bits",
+                    "offset": 6,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "LVL_LOW": {
+                            "description": "The low level of INTn generates an interrupt request",
+                            "value": 0
+                          },
+                          "EDGE_BOTH": {
+                            "description": "Any edge of INTn generates asynchronously an interrupt request",
+                            "value": 1
+                          },
+                          "EDGE_FALLING": {
+                            "description": "The falling edge of INTn generates asynchronously an interrupt request",
+                            "value": 2
+                          },
+                          "EDGE_RISING": {
+                            "description": "The rising edge of INTn generates asynchronously an interrupt request",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ISC2": {
+                    "description": "External Interrupt 2 Sense Control Bits",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "LVL_LOW": {
+                            "description": "The low level of INTn generates an interrupt request",
+                            "value": 0
+                          },
+                          "EDGE_BOTH": {
+                            "description": "Any edge of INTn generates asynchronously an interrupt request",
+                            "value": 1
+                          },
+                          "EDGE_FALLING": {
+                            "description": "The falling edge of INTn generates asynchronously an interrupt request",
+                            "value": 2
+                          },
+                          "EDGE_RISING": {
+                            "description": "The rising edge of INTn generates asynchronously an interrupt request",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ISC1": {
+                    "description": "External Interrupt 1 Sense Control Bits",
+                    "offset": 2,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "LVL_LOW": {
+                            "description": "The low level of INTn generates an interrupt request",
+                            "value": 0
+                          },
+                          "EDGE_BOTH": {
+                            "description": "Any edge of INTn generates asynchronously an interrupt request",
+                            "value": 1
+                          },
+                          "EDGE_FALLING": {
+                            "description": "The falling edge of INTn generates asynchronously an interrupt request",
+                            "value": 2
+                          },
+                          "EDGE_RISING": {
+                            "description": "The rising edge of INTn generates asynchronously an interrupt request",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ISC0": {
+                    "description": "External Interrupt 0 Sense Control Bits",
+                    "offset": 0,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "LVL_LOW": {
+                            "description": "The low level of INTn generates an interrupt request",
+                            "value": 0
+                          },
+                          "EDGE_BOTH": {
+                            "description": "Any edge of INTn generates asynchronously an interrupt request",
+                            "value": 1
+                          },
+                          "EDGE_FALLING": {
+                            "description": "The falling edge of INTn generates asynchronously an interrupt request",
+                            "value": 2
+                          },
+                          "EDGE_RISING": {
+                            "description": "The rising edge of INTn generates asynchronously an interrupt request",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "EICRB": {
+              "description": "External Interrupt Control Register B",
+              "offset": 46,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ISC6": {
+                    "description": "External Interrupt 6 Sense Control Bits",
+                    "offset": 4,
+                    "size": 2,
+                    "enum": {
+                      "size": 2,
+                      "children": {
+                        "enum_fields": {
+                          "LVL_LOW": {
+                            "description": "The low level of INTn generates an interrupt request",
+                            "value": 0
+                          },
+                          "EDGE_BOTH": {
+                            "description": "Any edge of INTn generates asynchronously an interrupt request",
+                            "value": 1
+                          },
+                          "EDGE_FALLING": {
+                            "description": "The falling edge of INTn generates asynchronously an interrupt request",
+                            "value": 2
+                          },
+                          "EDGE_RISING": {
+                            "description": "The rising edge of INTn generates asynchronously an interrupt request",
+                            "value": 3
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "USB": {
+        "description": "USB Controller",
+        "children": {
+          "registers": {
+            "UHWCON": {
+              "description": "USB Hardware Control",
+              "offset": 0,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "UVREGE": {
+                    "description": "USB pad regulator enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "USBCON": {
+              "description": "USB Control",
+              "offset": 1,
+              "size": 8,
+              "reset_value": 32,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "USBE": {
+                    "description": "USB macro Enable",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "FRZCLK": {
+                    "description": "Freeze USB Clock",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "OTGPADE": {
+                    "description": "VBUS Pad Enable",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "VBUSTE": {
+                    "description": "VBUS Transition Interrupt Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "USBSTA": {
+              "description": "USB Status",
+              "offset": 2,
+              "size": 8,
+              "reset_value": 2,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "ID": {
+                    "description": "ID Status (Always 1)",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "VBUS": {
+                    "description": "VBus Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "USBINT": {
+              "description": "USB Interrupt",
+              "offset": 3,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "VBUSTI": {
+                    "description": "IVBUS Transition Interrupt Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UDCON": {
+              "description": "USB Device Control",
+              "offset": 9,
+              "size": 8,
+              "reset_value": 1,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "RSTCPU": {
+                    "description": "Reset CPU Bit",
+                    "offset": 3,
+                    "size": 1,
+                    "access": "read-only"
+                  },
+                  "LSM": {
+                    "description": "Low Speed Mode Selection",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "RMWKUP": {
+                    "description": "Remote Wake-Up",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "DETACH": {
+                    "description": "Detach Device",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UDINT": {
+              "description": "USB Device Interrupt",
+              "offset": 10,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "UPRSMI": {
+                    "description": "Upstream Resume Interrupt Flag",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "EORSMI": {
+                    "description": "End Of Resume Interrupt Flag",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "WAKEUPI": {
+                    "description": "Wake-up CPU Interrupt Flag",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "EORSTI": {
+                    "description": "End Of Reset Interrupt Flag",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "SOFI": {
+                    "description": "Start Of Frame Interrupt Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "SUSPI": {
+                    "description": "Suspend Interrupt Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UDIEN": {
+              "description": "USB Device Interrupt Enable",
+              "offset": 11,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "UPRSME": {
+                    "description": "Upstream Resume Interrupt Enable",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "EORSME": {
+                    "description": "End Of Resume Interrupt Enable",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "WAKEUPE": {
+                    "description": "Wake-up CPU Interrupt Enable",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "EORSTE": {
+                    "description": "End Of Reset Interrupt Enable",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "SOFE": {
+                    "description": "Start Of Frame Interrupt Enable",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "SUSPE": {
+                    "description": "Suspend Interrupt Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UDADDR": {
+              "description": "USB Device Address",
+              "offset": 12,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "ADDEN": {
+                    "description": "Address Enable",
+                    "offset": 7,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "UADD": {
+                    "description": "USB Address",
+                    "offset": 0,
+                    "size": 7
+                  }
+                }
+              }
+            },
+            "UDFNUML": {
+              "description": "USB Frame Number Low",
+              "offset": 13,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "FNUM": {
+                    "description": "Frame Number (Low Bits)",
+                    "offset": 0,
+                    "size": 8
+                  }
+                }
+              }
+            },
+            "UDFNUMH": {
+              "description": "USB Frame Number High",
+              "offset": 14,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "FNUM": {
+                    "description": "Frame Number (High Bits)",
+                    "offset": 0,
+                    "size": 3
+                  }
+                }
+              }
+            },
+            "UDMFN": {
+              "description": "USB Frame Number CRC Error Flag",
+              "offset": 15,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "FNCERR": {
+                    "description": "Frame Number CRC Error Flag",
+                    "offset": 4,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UEINTX": {
+              "description": "USB Endpoint Interrupt",
+              "offset": 17,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "FIFOCON": {
+                    "description": "FIFO Control Bit",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "NAKINI": {
+                    "description": "NAK IN Received Interrupt Flag",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "RWAL": {
+                    "description": "Read/Write Allowed Flag",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "NAKOUTI": {
+                    "description": "NAK OUT Received Interrupt Flag",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "RXSTPI": {
+                    "description": "Received Setup Interrupt Flag",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "RXOUTI": {
+                    "description": "Received Out Data Interrupt Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "STALLEDI": {
+                    "description": "STALLEDI Interrupt Flag",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TXINI": {
+                    "description": "Transmitter Ready Interrupt Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UENUM": {
+              "description": "USB Endpoint Number",
+              "offset": 18,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "EPNUM": {
+                    "description": "Endpoint Number",
+                    "offset": 0,
+                    "size": 3
+                  }
+                }
+              }
+            },
+            "UERST": {
+              "description": "USB Endpoint Reset",
+              "offset": 19,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "EPRST6": {
+                    "description": "Endpoint 6 FIFO Reset",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "EPRST5": {
+                    "description": "Endpoint 5 FIFO Reset",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "EPRST4": {
+                    "description": "Endpoint 4 FIFO Reset",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "EPRST3": {
+                    "description": "Endpoint 3 FIFO Reset",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "EPRST2": {
+                    "description": "Endpoint 2 FIFO Reset",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "EPRST1": {
+                    "description": "Endpoint 1 FIFO Reset",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "EPRST0": {
+                    "description": "Endpoint 0 FIFO Reset",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UECONX": {
+              "description": "USB Endpoint Control",
+              "offset": 20,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "STALLRQ": {
+                    "description": "Stall Request Handshake",
+                    "offset": 5,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "STALLRQC": {
+                    "description": "Stall Request Clear Handshake",
+                    "offset": 4,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "RSTDT": {
+                    "description": "Reset Data Toggle",
+                    "offset": 3,
+                    "size": 1,
+                    "access": "write-only"
+                  },
+                  "EPEN": {
+                    "description": "Endpoint Enable",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UECFG0X": {
+              "description": "USB Endpoint Configuration 0",
+              "offset": 21,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "EPTYPE": {
+                    "description": "Endpoint Type",
+                    "offset": 6,
+                    "size": 2
+                  },
+                  "EPDIR": {
+                    "description": "Endpoint Direction",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UECFG1X": {
+              "description": "USB Endpoint Configuration 1",
+              "offset": 22,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "EPSIZE": {
+                    "description": "Endpoint Size",
+                    "offset": 4,
+                    "size": 3
+                  },
+                  "EPBK": {
+                    "description": "Endpoint Bank",
+                    "offset": 2,
+                    "size": 2
+                  },
+                  "ALLOC": {
+                    "description": "Endpoint Allocation",
+                    "offset": 1,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UESTA0X": {
+              "description": "USB Endpoint Status 0",
+              "offset": 23,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "CFGOK": {
+                    "description": "Configuration Status Flag",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "OVERFI": {
+                    "description": "Overflow Error Interrupt Flag",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "UNDERFI": {
+                    "description": "Underflow Error Interrupt Flag",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "DTSEQ": {
+                    "description": "Data Toggle Sequencing Flag",
+                    "offset": 2,
+                    "size": 2
+                  },
+                  "NBUSYBK": {
+                    "description": "Busy Bank Flag",
+                    "offset": 0,
+                    "size": 2
+                  }
+                }
+              }
+            },
+            "UESTA1X": {
+              "description": "USB Endpoint Status 1",
+              "offset": 24,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "CTRLDIR": {
+                    "description": "Control Direction Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "CURRBK": {
+                    "description": "Current Bank Flag",
+                    "offset": 0,
+                    "size": 2
+                  }
+                }
+              }
+            },
+            "UEIENX": {
+              "description": "USB Endpoint Interrupt Enable",
+              "offset": 25,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "FLERRE": {
+                    "description": "Flow Error Interrupt Enable Flag",
+                    "offset": 7,
+                    "size": 1
+                  },
+                  "NAKINE": {
+                    "description": "NAK IN Interrupt Enable Flag",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "NAKOUTE": {
+                    "description": "NAK OUT Interrupt Enable Flag",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "RXSTPE": {
+                    "description": "Received Setup Interrupt Enable Flag",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "RXOUTE": {
+                    "description": "Received Out Data Interrupt Enable Flag",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "STALLEDE": {
+                    "description": "Stalled Interrupt Enable Flag",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "TXINE": {
+                    "description": "Transmitter Ready Interrupt Enable Flag",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            },
+            "UEDATX": {
+              "description": "USB Endpoint Data",
+              "offset": 26,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255
+            },
+            "UEBCLX": {
+              "description": "USB Endpoint Byte Count Low",
+              "offset": 27,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only"
+            },
+            "UEBCHX": {
+              "description": "USB Endpoint Byte Count High",
+              "offset": 28,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "access": "read-only",
+              "children": {
+                "fields": {
+                  "BYCT_H": {
+                    "description": "Byte Count High Bits",
+                    "offset": 0,
+                    "size": 3
+                  }
+                }
+              }
+            },
+            "UEINT": {
+              "description": "USB Endpoint Interrupts",
+              "offset": 29,
+              "size": 8,
+              "reset_value": 0,
+              "reset_mask": 255,
+              "children": {
+                "fields": {
+                  "D6": {
+                    "description": "Endpoint 6 Interrupt Bit",
+                    "offset": 6,
+                    "size": 1
+                  },
+                  "D5": {
+                    "description": "Endpoint 5 Interrupt Bit",
+                    "offset": 5,
+                    "size": 1
+                  },
+                  "D4": {
+                    "description": "Endpoint 4 Interrupt Bit",
+                    "offset": 4,
+                    "size": 1
+                  },
+                  "D3": {
+                    "description": "Endpoint 3 Interrupt Bit",
+                    "offset": 3,
+                    "size": 1
+                  },
+                  "D2": {
+                    "description": "Endpoint 2 Interrupt Bit",
+                    "offset": 2,
+                    "size": 1
+                  },
+                  "D1": {
+                    "description": "Endpoint 1 Interrupt Bit",
+                    "offset": 1,
+                    "size": 1
+                  },
+                  "D0": {
+                    "description": "Endpoint 0 Interrupt Bit",
+                    "offset": 0,
+                    "size": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "devices": {
+    "ATmega32U4": {
+      "arch": "unknown",
+      "description": "8-bit Microcontroller with 32K bytes of ISP Flash and USB Controller",
+      "properties": {
+        "cpu.mpuPresent": "false",
+        "cpu.nvicPrioBits": "8",
+        "cpu.vendorSystickConfig": "false",
+        "cpu.deviceNumInterrupts": "43",
+        "cpu.revision": "r0p0",
+        "cpu.endian": "little",
+        "cpu.name": "ATmega32U4",
+        "cpu.fpuPresent": "true"
+      },
+      "children": {
+        "interrupts": {
+          "TIMER0_COMPA": {
+            "index": 21,
+            "description": "Timer/Counter0 Compare Match A"
+          },
+          "TIMER0_COMPB": {
+            "index": 22,
+            "description": "Timer/Counter0 Compare Match B"
+          },
+          "TIMER0_OVF": {
+            "index": 23,
+            "description": "Timer/Counter0 Overflow"
+          },
+          "TIMER1_CAPT": {
+            "index": 16,
+            "description": "Timer/Counter1 Capture Event"
+          },
+          "TIMER1_COMPA": {
+            "index": 17,
+            "description": "Timer/Counter1 Compare Match A"
+          },
+          "TIMER1_COMPB": {
+            "index": 18,
+            "description": "Timer/Counter1 Compare Match B"
+          },
+          "TIMER1_COMPC": {
+            "index": 19,
+            "description": "Timer/Counter1 Compare Match C"
+          },
+          "TIMER1_OVF": {
+            "index": 20,
+            "description": "Timer/Counter1 Overflow"
+          },
+          "TIMER3_CAPT": {
+            "index": 31,
+            "description": "Timer/Counter3 Capture Event"
+          },
+          "TIMER3_COMPA": {
+            "index": 32,
+            "description": "Timer/Counter3 Compare Match A"
+          },
+          "TIMER3_COMPB": {
+            "index": 33,
+            "description": "Timer/Counter3 Compare Match B"
+          },
+          "TIMER3_COMPC": {
+            "index": 34,
+            "description": "Timer/Counter3 Compare Match C"
+          },
+          "TIMER3_OVF": {
+            "index": 35,
+            "description": "Timer/Counter3 Overflow"
+          },
+          "TIMER4_COMPA": {
+            "index": 38,
+            "description": "Timer/Counter4 Compare Match A"
+          },
+          "TIMER4_COMPB": {
+            "index": 39,
+            "description": "Timer/Counter4 Compare Match B"
+          },
+          "TIMER4_COMPD": {
+            "index": 40,
+            "description": "Timer/Counter4 Compare Match D"
+          },
+          "TIMER4_OVF": {
+            "index": 41,
+            "description": "Timer/Counter4 Overflow"
+          },
+          "TIMER4_FPF": {
+            "index": 42,
+            "description": "Timer/Counter4 Fault Protection Interrupt"
+          },
+          "INT0": {
+            "index": 1,
+            "description": "External Interrupt 0"
+          },
+          "INT1": {
+            "index": 2,
+            "description": "External Interrupt 1"
+          },
+          "INT2": {
+            "index": 3,
+            "description": "External Interrupt 2"
+          },
+          "INT3": {
+            "index": 4,
+            "description": "External Interrupt 3"
+          },
+          "INT6": {
+            "index": 7,
+            "description": "External Interrupt 6"
+          },
+          "USB_GEN": {
+            "index": 10,
+            "description": "USB General Interrupt Request"
+          },
+          "USB_COM": {
+            "index": 11,
+            "description": "USB Endpoint/Pipe Interrupt Communication Request"
+          }
+        },
+        "peripheral_instances": {
+          "PORTB": {
+            "offset": 35,
+            "type": "types.peripherals.PORTB"
+          },
+          "PORTC": {
+            "offset": 38,
+            "type": "types.peripherals.PORTC"
+          },
+          "PORTD": {
+            "offset": 41,
+            "type": "types.peripherals.PORTD"
+          },
+          "PORTE": {
+            "offset": 44,
+            "type": "types.peripherals.PORTE"
+          },
+          "PORTF": {
+            "offset": 47,
+            "type": "types.peripherals.PORTF"
+          },
+          "TIMER0": {
+            "description": "8-Bit Timer/Counter0 with PWM",
+            "offset": 53,
+            "type": "types.peripherals.TIMER0"
+          },
+          "TIMER1": {
+            "description": "16-Bit Timer/Counter1",
+            "offset": 54,
+            "type": "types.peripherals.TIMER1"
+          },
+          "TIMER3": {
+            "description": "16-Bit Timer/Counter3",
+            "offset": 56,
+            "type": "types.peripherals.TIMER3"
+          },
+          "TIMER4": {
+            "description": "10-bit High Speed Timer/Counter4",
+            "offset": 57,
+            "type": "types.peripherals.TIMER4"
+          },
+          "EXT_INT": {
+            "description": "External Interrupts",
+            "offset": 60,
+            "type": "types.peripherals.EXT_INT"
+          },
+          "USB": {
+            "description": "USB Controller",
+            "offset": 215,
+            "type": "types.peripherals.USB"
+          }
+        }
+      }
+    }
+  }
+}

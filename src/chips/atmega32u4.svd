@@ -1,0 +1,4263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--https://github.com/Rahix/atmega32u4/-->
+<device schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
+  <vendor>Atmel</vendor>
+  <name>ATmega32U4</name>
+  <version>0.1</version>
+  <description>8-bit Microcontroller with 32K bytes of ISP Flash and USB Controller</description>
+
+  <cpu>
+    <name>ATmega32U4</name>
+    <revision>r0p0</revision>
+    <endian>little</endian>
+    <mpuPresent>false</mpuPresent>
+    <fpuPresent>true</fpuPresent>
+    <nvicPrioBits>8</nvicPrioBits>
+    <vendorSystickConfig>false</vendorSystickConfig>
+    <deviceNumInterrupts>43</deviceNumInterrupts>
+  </cpu>
+
+  <addressUnitBits>8</addressUnitBits>
+  <size>8</size>
+  <access>read-write</access>
+  <resetValue>0</resetValue>
+  <resetMask>0xff</resetMask>
+
+  <peripherals>
+    <peripheral>
+      <name>PORTB</name>
+      <baseAddress>0x23</baseAddress>
+
+      <addressBlock>
+        <offset>0x00</offset>
+        <size>0x03</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>PIN</name>
+          <description>Port B Input Pins Address</description>
+          <access>read-only</access>
+          <addressOffset>0x00</addressOffset>
+          <fields>
+            <field>
+              <name>P7</name>
+              <description>Pin 7 Input</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P6</name>
+              <description>Pin 6 Input</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P5</name>
+              <description>Pin 5 Input</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P4</name>
+              <description>Pin 4 Input</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P3</name>
+              <description>Pin 3 Input</description>
+              <bitRange>[3:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P2</name>
+              <description>Pin 2 Input</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P1</name>
+              <description>Pin 1 Input</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P0</name>
+              <description>Pin 0 Input</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>DDR</name>
+          <description>Port B Data Direction Register</description>
+          <addressOffset>0x01</addressOffset>
+          <fields>
+            <field>
+              <name>DD7</name>
+              <description>Pin 7 Direction</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD6</name>
+              <description>Pin 6 Direction</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD5</name>
+              <description>Pin 5 Direction</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD4</name>
+              <description>Pin 4 Direction</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD3</name>
+              <description>Pin 3 Direction</description>
+              <bitRange>[3:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD2</name>
+              <description>Pin 2 Direction</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD1</name>
+              <description>Pin 1 Direction</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD0</name>
+              <description>Pin 0 Direction</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>PORT</name>
+          <description>Port B Output/Data Register</description>
+          <addressOffset>0x02</addressOffset>
+          <fields>
+            <field>
+              <name>D7</name>
+              <description>Pin 7 Output/Data</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D6</name>
+              <description>Pin 6 Output/Data</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D5</name>
+              <description>Pin 5 Output/Data</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D4</name>
+              <description>Pin 4 Output/Data</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D3</name>
+              <description>Pin 3 Output/Data</description>
+              <bitRange>[3:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D2</name>
+              <description>Pin 2 Output/Data</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D1</name>
+              <description>Pin 1 Output/Data</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D0</name>
+              <description>Pin 0 Output/Data</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>PORTC</name>
+      <baseAddress>0x26</baseAddress>
+
+      <addressBlock>
+        <offset>0x00</offset>
+        <size>0x03</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>PIN</name>
+          <description>Port C Input Pins Address</description>
+          <access>read-only</access>
+          <addressOffset>0x00</addressOffset>
+          <fields>
+            <field>
+              <name>P7</name>
+              <description>Pin 7 Input</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P6</name>
+              <description>Pin 6 Input</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>DDR</name>
+          <description>Port C Data Direction Register</description>
+          <addressOffset>0x01</addressOffset>
+          <fields>
+            <field>
+              <name>DD7</name>
+              <description>Pin 7 Direction</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD6</name>
+              <description>Pin 6 Direction</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>PORT</name>
+          <description>Port C Output/Data Register</description>
+          <addressOffset>0x02</addressOffset>
+          <fields>
+            <field>
+              <name>D7</name>
+              <description>Pin 7 Output/Data</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D6</name>
+              <description>Pin 6 Output/Data</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>PORTD</name>
+      <baseAddress>0x29</baseAddress>
+
+      <addressBlock>
+        <offset>0x00</offset>
+        <size>0x03</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>PIN</name>
+          <description>Port D Input Pins Address</description>
+          <access>read-only</access>
+          <addressOffset>0x00</addressOffset>
+          <fields>
+            <field>
+              <name>P7</name>
+              <description>Pin 7 Input</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P6</name>
+              <description>Pin 6 Input</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P5</name>
+              <description>Pin 5 Input</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P4</name>
+              <description>Pin 4 Input</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P3</name>
+              <description>Pin 3 Input</description>
+              <bitRange>[3:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P2</name>
+              <description>Pin 2 Input</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P1</name>
+              <description>Pin 1 Input</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P0</name>
+              <description>Pin 0 Input</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>DDR</name>
+          <description>Port D Data Direction Register</description>
+          <addressOffset>0x01</addressOffset>
+          <fields>
+            <field>
+              <name>DD7</name>
+              <description>Pin 7 Direction</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD6</name>
+              <description>Pin 6 Direction</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD5</name>
+              <description>Pin 5 Direction</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD4</name>
+              <description>Pin 4 Direction</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD3</name>
+              <description>Pin 3 Direction</description>
+              <bitRange>[3:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD2</name>
+              <description>Pin 2 Direction</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD1</name>
+              <description>Pin 1 Direction</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD0</name>
+              <description>Pin 0 Direction</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>PORT</name>
+          <description>Port D Output/Data Register</description>
+          <addressOffset>0x02</addressOffset>
+          <fields>
+            <field>
+              <name>D7</name>
+              <description>Pin 7 Output/Data</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D6</name>
+              <description>Pin 6 Output/Data</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D5</name>
+              <description>Pin 5 Output/Data</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D4</name>
+              <description>Pin 4 Output/Data</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D3</name>
+              <description>Pin 3 Output/Data</description>
+              <bitRange>[3:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D2</name>
+              <description>Pin 2 Output/Data</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D1</name>
+              <description>Pin 1 Output/Data</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D0</name>
+              <description>Pin 0 Output/Data</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>PORTE</name>
+      <baseAddress>0x2C</baseAddress>
+
+      <addressBlock>
+        <offset>0x00</offset>
+        <size>0x03</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>PIN</name>
+          <description>Port E Input Pins Address</description>
+          <access>read-only</access>
+          <addressOffset>0x00</addressOffset>
+          <fields>
+            <field>
+              <name>P6</name>
+              <description>Pin 6 Input</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P2</name>
+              <description>Pin 2 Input</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>DDR</name>
+          <description>Port E Data Direction Register</description>
+          <addressOffset>0x01</addressOffset>
+          <fields>
+            <field>
+              <name>DD6</name>
+              <description>Pin 6 Direction</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD2</name>
+              <description>Pin 2 Direction</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>PORT</name>
+          <description>Port E Output/Data Register</description>
+          <addressOffset>0x02</addressOffset>
+          <fields>
+            <field>
+              <name>D6</name>
+              <description>Pin 6 Output/Data</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D2</name>
+              <description>Pin 2 Output/Data</description>
+              <bitRange>[2:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>PORTF</name>
+      <baseAddress>0x2F</baseAddress>
+
+      <addressBlock>
+        <offset>0x00</offset>
+        <size>0x03</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>PIN</name>
+          <description>Port F Input Pins Address</description>
+          <access>read-only</access>
+          <addressOffset>0x00</addressOffset>
+          <fields>
+            <field>
+              <name>P7</name>
+              <description>Pin 7 Input</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P6</name>
+              <description>Pin 6 Input</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P5</name>
+              <description>Pin 5 Input</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P4</name>
+              <description>Pin 4 Input</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P1</name>
+              <description>Pin 1 Input</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>P0</name>
+              <description>Pin 0 Input</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>DDR</name>
+          <description>Port F Data Direction Register</description>
+          <addressOffset>0x01</addressOffset>
+          <fields>
+            <field>
+              <name>DD7</name>
+              <description>Pin 7 Direction</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD6</name>
+              <description>Pin 6 Direction</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD5</name>
+              <description>Pin 5 Direction</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD4</name>
+              <description>Pin 4 Direction</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD1</name>
+              <description>Pin 1 Direction</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DD0</name>
+              <description>Pin 0 Direction</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>INPUT</name>
+                  <description>Pin is configured as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT</name>
+                  <description>Pin is configured as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+
+        <register>
+          <name>PORT</name>
+          <description>Port F Output/Data Register</description>
+          <addressOffset>0x02</addressOffset>
+          <fields>
+            <field>
+              <name>D7</name>
+              <description>Pin 7 Output/Data</description>
+              <bitRange>[7:7]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D6</name>
+              <description>Pin 6 Output/Data</description>
+              <bitRange>[6:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D5</name>
+              <description>Pin 5 Output/Data</description>
+              <bitRange>[5:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D4</name>
+              <description>Pin 4 Output/Data</description>
+              <bitRange>[4:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D1</name>
+              <description>Pin 1 Output/Data</description>
+              <bitRange>[1:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>D0</name>
+              <description>Pin 0 Output/Data</description>
+              <bitRange>[0:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LOW</name>
+                  <description>Pin is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH</name>
+                  <description>Pin is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>TIMER0</name>
+      <description>8-Bit Timer/Counter0 with PWM</description>
+      <baseAddress>0x35</baseAddress>
+
+      <interrupt>
+        <name>TIMER0_COMPA</name>
+        <description>Timer/Counter0 Compare Match A</description>
+        <value>21</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER0_COMPB</name>
+        <description>Timer/Counter0 Compare Match B</description>
+        <value>22</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER0_OVF</name>
+        <description>Timer/Counter0 Overflow</description>
+        <value>23</value>
+      </interrupt>
+
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0xf</offset>
+        <size>0x5</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x39</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>TIFR</name>
+          <description>Timer Interrupt Flag Register</description>
+          <addressOffset>0x0</addressOffset>
+
+          <fields>
+            <field>
+              <name>OCF_B</name>
+              <description>Output Compare B Match Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCF_A</name>
+              <description>Output Compare A Match Flag</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TOV</name>
+              <description>Timer Overflow Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_A</name>
+          <description>Timer/Counter Control Register A</description>
+          <addressOffset>0xf</addressOffset>
+
+          <fields>
+            <field>
+              <name>COM_A</name>
+              <description>Compare Match Output A Mode</description>
+              <bitRange>[7:6]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC0x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC0x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC0x on Compare Match (If PWM is enabled, OC0x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC0x on Compare Match (If PWM is enabled, OC0x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_B</name>
+              <description>Compare Match Output B Mode</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC0x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC0x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC0x on Compare Match (If PWM is enabled, OC0x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC0x on Compare Match (If PWM is enabled, OC0x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>WGM0</name>
+              <description>Waveform Generation Mode Bits 1:0</description>
+              <bitRange>[1:0]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>NORMAL_TOP</name>
+                  <description>Normal, Top: `0xff`, Update: *Immediate*, Flag: *MAX*</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PWM_PHASE</name>
+                  <description>Phase Correct PWM, Top: `0xff`, Update: *TOP*, Flag: *BOTTOM*</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CTC</name>
+                  <description>CTC, Top: *OCRA*, Update: *Immediate*, Flag: *MAX*</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PWM_FAST</name>
+                  <description>Fast PWM, Top: `0xff`, Update: *TOP*, Flag: *MAX*</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_B</name>
+          <description>Timer/Counter Control Register B</description>
+          <addressOffset>0x10</addressOffset>
+
+          <fields>
+            <field>
+              <name>FOC_A</name>
+              <description>Force Output Compare A</description>
+              <bitRange>[7:7]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>FOC_B</name>
+              <description>Force Output Compare B</description>
+              <bitRange>[6:6]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>WGM2</name>
+              <description>Waveform Generation Mode Bit 2 (Enable Top: *OCRA* for PWM modes)</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>CS</name>
+              <description>Clock Select</description>
+              <bitRange>[2:0]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>STOPPED</name>
+                  <description>No clock source (Timer/Counter stopped)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO</name>
+                  <description>clkIO/1 (No prescaling)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_8</name>
+                  <description>clkIO/8 (From prescaler)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_64</name>
+                  <description>clkIO/64 (From prescaler)</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_256</name>
+                  <description>clkIO/256 (From prescaler)</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_1024</name>
+                  <description>clkIO/1024 (From prescaler)</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXT_FALLING</name>
+                  <description>External clock source on T0 pin. Clock on falling edge.</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXT_RISING</name>
+                  <description>External clock source on T0 pin. Clock on rising edge.</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNT</name>
+          <description>Timer/Counter Register</description>
+          <addressOffset>0x11</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_A</name>
+          <description>Timer Output Compare Register A</description>
+          <addressOffset>0x12</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_B</name>
+          <description>Timer Output Compare Register B</description>
+          <addressOffset>0x13</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>TIMSK</name>
+          <description>Timer Interrupt Mask Register</description>
+          <addressOffset>0x39</addressOffset>
+
+          <fields>
+            <field>
+              <name>OCIE_B</name>
+              <description>Output Compare Match B Interrupt Enable</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_A</name>
+              <description>Output Compare Match A Interrupt Enable</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TOIE</name>
+              <description>Timer Overflow Interrupt Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>TIMER1</name>
+      <description>16-Bit Timer/Counter1</description>
+      <baseAddress>0x36</baseAddress>
+
+      <interrupt>
+        <name>TIMER1_CAPT</name>
+        <description>Timer/Counter1 Capture Event</description>
+        <value>16</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1_COMPA</name>
+        <description>Timer/Counter1 Compare Match A</description>
+        <value>17</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1_COMPB</name>
+        <description>Timer/Counter1 Compare Match B</description>
+        <value>18</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1_COMPC</name>
+        <description>Timer/Counter1 Compare Match C</description>
+        <value>19</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1_OVF</name>
+        <description>Timer/Counter1 Overflow</description>
+        <value>20</value>
+      </interrupt>
+
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x39</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x4a</offset>
+        <size>0x3</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x4e</offset>
+        <size>0xa</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>TIFR</name>
+          <description>Timer Interrupt Flag Register</description>
+          <addressOffset>0x0</addressOffset>
+
+          <fields>
+            <field>
+              <name>ICF</name>
+              <description>Input Capture Flag</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>OCF_C</name>
+              <description>Output Compare C Match Flag</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>OCF_B</name>
+              <description>Output Compare B Match Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCF_A</name>
+              <description>Output Compare A Match Flag</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TOV</name>
+              <description>Timer Overflow Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMSK</name>
+          <description>Timer Interrupt Mask Register</description>
+          <addressOffset>0x39</addressOffset>
+
+          <fields>
+            <field>
+              <name>ICIE</name>
+              <description>Input Capture Interrupt Enable</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_C</name>
+              <description>Output Compare Match C Interrupt Enable</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_B</name>
+              <description>Output Compare Match B Interrupt Enable</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_A</name>
+              <description>Output Compare Match A Interrupt Enable</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TOIE</name>
+              <description>Timer Overflow Interrupt Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_A</name>
+          <description>Timer/Counter Control Register A</description>
+          <addressOffset>0x4a</addressOffset>
+
+          <fields>
+            <field>
+              <name>COM_A</name>
+              <description>Compare Output Mode for Channel A</description>
+              <bitRange>[7:6]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC1x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC1x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC1x on Compare Match (If PWM is enabled, OC1x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC1x on Compare Match (If PWM is enabled, OC1x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_B</name>
+              <description>Compare Output Mode for Channel B</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC1x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC1x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC1x on Compare Match (If PWM is enabled, OC1x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC1x on Compare Match (If PWM is enabled, OC1x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_C</name>
+              <description>Compare Output Mode for Channel C</description>
+              <bitRange>[3:2]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC1x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC1x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC1x on Compare Match (If PWM is enabled, OC1x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC1x on Compare Match (If PWM is enabled, OC1x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>WGM0</name>
+              <description>Waveform Generation Mode 1:0</description>
+              <bitRange>[1:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_B</name>
+          <description>Timer/Counter Control Register B</description>
+          <addressOffset>0x4b</addressOffset>
+
+          <fields>
+            <field>
+              <name>ICNC</name>
+              <description>Input Capture Noise Canceler</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>ICES</name>
+              <description>Input Capture Edge Set</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>WGM2</name>
+              <description>Waveform Generation Mode 3:2</description>
+              <bitRange>[4:3]</bitRange>
+            </field>
+            <field>
+              <name>CS</name>
+              <description>Clock Select</description>
+              <bitRange>[2:0]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>STOPPED</name>
+                  <description>No clock source (Timer/Counter stopped)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO</name>
+                  <description>clkIO/1 (No prescaling)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_8</name>
+                  <description>clkIO/8 (From prescaler)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_64</name>
+                  <description>clkIO/64 (From prescaler)</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_256</name>
+                  <description>clkIO/256 (From prescaler)</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_1024</name>
+                  <description>clkIO/1024 (From prescaler)</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXT_FALLING</name>
+                  <description>External clock source on T0 pin. Clock on falling edge.</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXT_RISING</name>
+                  <description>External clock source on T0 pin. Clock on rising edge.</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_C</name>
+          <description>Timer/Counter Control Register C</description>
+          <addressOffset>0x4c</addressOffset>
+
+          <fields>
+            <field>
+              <name>FOC_A</name>
+              <description>Force Output Compare for Channel A</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>FOC_B</name>
+              <description>Force Output Compare for Channel B</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>FOC_C</name>
+              <description>Force Output Compare for Channel C</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNT_L</name>
+          <description>Timer/Counter Register Low Byte</description>
+          <addressOffset>0x4e</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>TCNT_H</name>
+          <description>Timer/Counter Register High Byte</description>
+          <addressOffset>0x4f</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>ICR_L</name>
+          <description>Input Capture Register Low Byte</description>
+          <addressOffset>0x50</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>ICR_H</name>
+          <description>Input Capture Register High Byte</description>
+          <addressOffset>0x51</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_A_L</name>
+          <description>Output Compare Register A Low Byte</description>
+          <addressOffset>0x52</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_A_H</name>
+          <description>Output Compare Register A High Byte</description>
+          <addressOffset>0x53</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_B_L</name>
+          <description>Output Compare Register B Low Byte</description>
+          <addressOffset>0x54</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_B_H</name>
+          <description>Output Compare Register B High Byte</description>
+          <addressOffset>0x55</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_C_L</name>
+          <description>Output Compare Register C Low Byte</description>
+          <addressOffset>0x56</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_C_H</name>
+          <description>Output Compare Register C High Byte</description>
+          <addressOffset>0x57</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>TIMER3</name>
+      <description>16-Bit Timer/Counter3</description>
+      <baseAddress>0x38</baseAddress>
+
+      <interrupt>
+        <name>TIMER3_CAPT</name>
+        <description>Timer/Counter3 Capture Event</description>
+        <value>31</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER3_COMPA</name>
+        <description>Timer/Counter3 Compare Match A</description>
+        <value>32</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER3_COMPB</name>
+        <description>Timer/Counter3 Compare Match B</description>
+        <value>33</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER3_COMPC</name>
+        <description>Timer/Counter3 Compare Match C</description>
+        <value>34</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER3_OVF</name>
+        <description>Timer/Counter3 Overflow</description>
+        <value>35</value>
+      </interrupt>
+
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x39</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x4e</offset>
+        <size>0x2</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x58</offset>
+        <size>0x3</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x5c</offset>
+        <size>0x2</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x60</offset>
+        <size>0x6</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>TIFR</name>
+          <description>Timer Interrupt Flag Register</description>
+          <addressOffset>0x0</addressOffset>
+
+          <fields>
+            <field>
+              <name>ICF</name>
+              <description>Input Capture Flag</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>OCF_C</name>
+              <description>Output Compare C Match Flag</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>OCF_B</name>
+              <description>Output Compare B Match Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCF_A</name>
+              <description>Output Compare A Match Flag</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TOV</name>
+              <description>Timer Overflow Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMSK</name>
+          <description>Timer Interrupt Mask Register</description>
+          <addressOffset>0x39</addressOffset>
+
+          <fields>
+            <field>
+              <name>ICIE</name>
+              <description>Input Capture Interrupt Enable</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_C</name>
+              <description>Output Compare Match C Interrupt Enable</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_B</name>
+              <description>Output Compare Match B Interrupt Enable</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_A</name>
+              <description>Output Compare Match A Interrupt Enable</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TOIE</name>
+              <description>Timer Overflow Interrupt Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR_L</name>
+          <description>Input Capture Register Low Byte</description>
+          <addressOffset>0x4e</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>ICR_H</name>
+          <description>Input Capture Register High Byte</description>
+          <addressOffset>0x4f</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>TCCR_A</name>
+          <description>Timer/Counter Control Register A</description>
+          <addressOffset>0x58</addressOffset>
+
+          <fields>
+            <field>
+              <name>COM_A</name>
+              <description>Compare Output Mode for Channel A</description>
+              <bitRange>[7:6]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC3x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC3x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC3x on Compare Match (If PWM is enabled, OC3x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC3x on Compare Match (If PWM is enabled, OC3x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_B</name>
+              <description>Compare Output Mode for Channel B</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC3x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC3x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC3x on Compare Match (If PWM is enabled, OC3x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC3x on Compare Match (If PWM is enabled, OC3x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_C</name>
+              <description>Compare Output Mode for Channel C</description>
+              <bitRange>[3:2]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC3x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC3x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC3x on Compare Match (If PWM is enabled, OC3x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC3x on Compare Match (If PWM is enabled, OC3x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>WGM0</name>
+              <description>Waveform Generation Mode 1:0</description>
+              <bitRange>[1:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_B</name>
+          <description>Timer/Counter Control Register B</description>
+          <addressOffset>0x59</addressOffset>
+
+          <fields>
+            <field>
+              <name>ICNC</name>
+              <description>Input Capture Noise Canceler</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>ICES</name>
+              <description>Input Capture Edge Set</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>WGM2</name>
+              <description>Waveform Generation Mode 3:2</description>
+              <bitRange>[4:3]</bitRange>
+            </field>
+            <field>
+              <name>CS</name>
+              <description>Clock Select</description>
+              <bitRange>[2:0]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>STOPPED</name>
+                  <description>No clock source (Timer/Counter stopped)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO</name>
+                  <description>clkIO/1 (No prescaling)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_8</name>
+                  <description>clkIO/8 (From prescaler)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_64</name>
+                  <description>clkIO/64 (From prescaler)</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_256</name>
+                  <description>clkIO/256 (From prescaler)</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IO_1024</name>
+                  <description>clkIO/1024 (From prescaler)</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXT_FALLING</name>
+                  <description>External clock source on T0 pin. Clock on falling edge.</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXT_RISING</name>
+                  <description>External clock source on T0 pin. Clock on rising edge.</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_C</name>
+          <description>Timer/Counter Control Register C</description>
+          <addressOffset>0x5a</addressOffset>
+
+          <fields>
+            <field>
+              <name>FOC_A</name>
+              <description>Force Output Compare for Channel A</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>FOC_B</name>
+              <description>Force Output Compare for Channel B</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>FOC_C</name>
+              <description>Force Output Compare for Channel C</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNT_L</name>
+          <description>Timer/Counter Register Low Byte</description>
+          <addressOffset>0x5c</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>TCNT_H</name>
+          <description>Timer/Counter Register High Byte</description>
+          <addressOffset>0x5d</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_A_L</name>
+          <description>Output Compare Register A Low Byte</description>
+          <addressOffset>0x60</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_A_H</name>
+          <description>Output Compare Register A High Byte</description>
+          <addressOffset>0x61</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_B_L</name>
+          <description>Output Compare Register B Low Byte</description>
+          <addressOffset>0x62</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_B_H</name>
+          <description>Output Compare Register B High Byte</description>
+          <addressOffset>0x63</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_C_L</name>
+          <description>Output Compare Register C Low Byte</description>
+          <addressOffset>0x64</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_C_H</name>
+          <description>Output Compare Register C High Byte</description>
+          <addressOffset>0x65</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>TIMER4</name>
+      <description>10-bit High Speed Timer/Counter4</description>
+      <baseAddress>0x39</baseAddress>
+
+      <interrupt>
+        <name>TIMER4_COMPA</name>
+        <description>Timer/Counter4 Compare Match A</description>
+        <value>38</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER4_COMPB</name>
+        <description>Timer/Counter4 Compare Match B</description>
+        <value>39</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER4_COMPD</name>
+        <description>Timer/Counter4 Compare Match D</description>
+        <value>40</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER4_OVF</name>
+        <description>Timer/Counter4 Overflow</description>
+        <value>41</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER4_FPF</name>
+        <description>Timer/Counter4 Fault Protection Interrupt</description>
+        <value>42</value>
+      </interrupt>
+
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x39</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x85</offset>
+        <size>0x7</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x96</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x9b</offset>
+        <size>0x1</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>TIFR</name>
+          <description>Timer Interrupt Flag Register</description>
+          <addressOffset>0x0</addressOffset>
+
+          <fields>
+            <field>
+              <name>OCF_D</name>
+              <description>Output Compare Flag D</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>OCF_A</name>
+              <description>Output Compare Flag A</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>OCF_B</name>
+              <description>Output Compare Flag B</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>TOV</name>
+              <description>Timer Overflow Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMSK</name>
+          <description>Timer Interrupt Mask Register</description>
+          <addressOffset>0x39</addressOffset>
+
+          <fields>
+            <field>
+              <name>OCIE_D</name>
+              <description>Output Compare Match D Interrupt Enable</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_A</name>
+              <description>Output Compare Match A Interrupt Enable</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>OCIE_B</name>
+              <description>Output Compare Match B Interrupt Enable</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>TOIE</name>
+              <description>Timer Overflow Interrupt Enable</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNT</name>
+          <description>Timer/Counter Register</description>
+          <addressOffset>0x85</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>TCH</name>
+          <description>Timer/Counter High Byte</description>
+          <addressOffset>0x86</addressOffset>
+
+          <fields>
+            <field>
+              <name>TC10</name>
+              <description>Additional MSB Bit for 11-Bit Access</description>
+              <bitRange>[2:2]</bitRange>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TC98</name>
+              <description>Two MSB bits of the 10-bit accesses</description>
+              <bitRange>[1:0]</bitRange>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_A</name>
+          <description>Timer/Counter Control Register A</description>
+          <addressOffset>0x87</addressOffset>
+
+          <fields>
+            <field>
+              <name>COM_A</name>
+              <description>Compare Output Mode for Channel A</description>
+              <bitRange>[7:6]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC4x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC4x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_B</name>
+              <description>Compare Output Mode for Channel B</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC4x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC4x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PWM_A</name>
+              <description>Pulse Width Modulator A</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>PWM_B</name>
+              <description>Pulse Width Modulator B</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+            <field>
+              <name>FOC_A</name>
+              <description>Force Output Compare Match A</description>
+              <bitRange>[3:3]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>FOC_B</name>
+              <description>Force Output Compare Match B</description>
+              <bitRange>[2:2]</bitRange>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_B</name>
+          <description>Timer/Counter Control Register B</description>
+          <addressOffset>0x88</addressOffset>
+
+          <fields>
+            <field>
+              <name>PWM_X</name>
+              <description>PWM Inversion Mode</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>DTPS</name>
+              <description>Dead Time Prescaler</description>
+              <bitRange>[5:4]</bitRange>
+            </field>
+            <field>
+              <name>CS</name>
+              <description>Clock Source</description>
+              <bitRange>[3:0]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>STOPPED</name>
+                  <description>No clock source (Timer/Counter stopped)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK</name>
+                  <description>clk/1 (No Prescaler)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_2</name>
+                  <description>clk/2</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_4</name>
+                  <description>clk/4</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_8</name>
+                  <description>clk/8</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_16</name>
+                  <description>clk/16</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_32</name>
+                  <description>clk/32</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_64</name>
+                  <description>clk/64</description>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_128</name>
+                  <description>clk/128</description>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_256</name>
+                  <description>clk/256</description>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_512</name>
+                  <description>clk/512</description>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_1024</name>
+                  <description>clk/1024</description>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_2048</name>
+                  <description>clk/2048</description>
+                  <value>12</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_4096</name>
+                  <description>clk/4096</description>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_8192</name>
+                  <description>clk/8192</description>
+                  <value>14</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CLK_16384</name>
+                  <description>clk/16384</description>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PSR</name>
+              <description>Prescaler Reset</description>
+              <bitRange>[6:6]</bitRange>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_C</name>
+          <description>Timer/Counter Control Register C</description>
+          <addressOffset>0x89</addressOffset>
+
+          <fields>
+            <field>
+              <name>COM_A</name>
+              <description>Compare Output Mode for Channel A</description>
+              <bitRange>[7:6]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC4x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC4x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_B</name>
+              <description>Compare Output Mode for Channel B</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC4x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC4x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>COM_D</name>
+              <description>Compare Output Mode for Channel D</description>
+              <bitRange>[3:2]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DISCONNECTED</name>
+                  <description>Normal port operation, OC4x disconnected</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_TOGGLE</name>
+                  <description>Toggle OC4x on Compare Match (Might depend on WGM)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_CLEAR</name>
+                  <description>Clear OC4x on Compare Match (If PWM is enabled, OC4x is set at TOP)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MATCH_SET</name>
+                  <description>Set OC4x on Compare Match (If PWM is enabled, OC4x is cleared at TOP)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PWM_D</name>
+              <description>Pulse Width Modulator D</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+            <field>
+              <name>FOC_D</name>
+              <description>Force Output Compare Match D</description>
+              <bitRange>[1:1]</bitRange>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_D</name>
+          <description>Timer/Counter Control Register D</description>
+          <addressOffset>0x8a</addressOffset>
+
+          <fields>
+            <field>
+              <name>FPIE</name>
+              <description>Fault Protection Interrupt Enable</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>FPEN</name>
+              <description>Fault Protection Mode Enable</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>FPNC</name>
+              <description>Fault Protection Noise Canceler</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>FPES</name>
+              <description>Fault Protection Edge Select</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>FPAC</name>
+              <description>Fault Protection Analog Comparator Enable</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>FPF</name>
+              <description>Fault Protection Interrupt Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>WGM</name>
+              <description>Waveform Generation Mode</description>
+              <bitRange>[1:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCCR_E</name>
+          <description>Timer/Counter Control Register E</description>
+          <addressOffset>0x8b</addressOffset>
+
+          <fields>
+            <field>
+              <name>TLOCK</name>
+              <description>Register Update Lock</description>
+              <bitRange>[7:7]</bitRange>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ENHC</name>
+              <description>Enhanced Compare/PWM Mode</description>
+              <bitRange>[6:6]</bitRange>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>OCOE5</name>
+              <description>Output Compare Override Enable (PD7)</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>OCOE4</name>
+              <description>Output Compare Override Enable (PD6)</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>OCOE3</name>
+              <description>Output Compare Override Enable (PB6)</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>OCOE2</name>
+              <description>Output Compare Override Enable (PB5)</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>OCOE1</name>
+              <description>Output Compare Override Enable (PC7)</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>OCOE0</name>
+              <description>Output Compare Override Enable (PC6)</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>OCR_A</name>
+          <description>Output Compare Register A</description>
+          <addressOffset>0x96</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_B</name>
+          <description>Output Compare Register B</description>
+          <addressOffset>0x97</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_C</name>
+          <description>Output Compare Register B</description>
+          <addressOffset>0x98</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>OCR_D</name>
+          <description>Output Compare Register B</description>
+          <addressOffset>0x99</addressOffset>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>DT</name>
+          <description>Dead Time Value</description>
+          <addressOffset>0x9b</addressOffset>
+
+          <fields>
+            <field>
+              <name>DT_H</name>
+              <description>Dead Time Value for OC4x Output</description>
+              <bitRange>[7:4]</bitRange>
+            </field>
+            <field>
+              <name>DT_L</name>
+              <description>Dead Time Value for ~OC4x Output</description>
+              <bitRange>[3:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>EXT_INT</name>
+      <description>External Interrupts</description>
+      <baseAddress>0x3c</baseAddress>
+
+      <interrupt>
+        <name>INT0</name>
+        <description>External Interrupt 0</description>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>INT1</name>
+        <description>External Interrupt 1</description>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>INT2</name>
+        <description>External Interrupt 2</description>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>INT3</name>
+        <description>External Interrupt 3</description>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>INT6</name>
+        <description>External Interrupt 6</description>
+        <value>7</value>
+      </interrupt>
+
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x2</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x2d</offset>
+        <size>0x2</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>EIFR</name>
+          <description>External Interrupt Flag Register</description>
+          <addressOffset>0x0</addressOffset>
+
+          <fields>
+            <field>
+              <name>INTF6</name>
+              <description>Interrupt 6 Flag</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>INTF3</name>
+              <description>Interrupt 3 Flag</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>INTF2</name>
+              <description>Interrupt 2 Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>INTF1</name>
+              <description>Interrupt 1 Flag</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>INTF0</name>
+              <description>Interrupt 0 Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EIMSK</name>
+          <description>External Interrupt Mask Register</description>
+          <addressOffset>0x1</addressOffset>
+
+          <fields>
+            <field>
+              <name>INT6</name>
+              <description>Interrupt 6 Enable</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>INT3</name>
+              <description>Interrupt 3 Enable</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>INT2</name>
+              <description>Interrupt 2 Enable</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>INT1</name>
+              <description>Interrupt 1 Enable</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>INT0</name>
+              <description>Interrupt 0 Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EICRA</name>
+          <description>External Interrupt Control Register A</description>
+          <addressOffset>0x2d</addressOffset>
+
+          <fields>
+            <field>
+              <name>ISC3</name>
+              <description>External Interrupt 3 Sense Control Bits</description>
+              <bitRange>[7:6]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LVL_LOW</name>
+                  <description>The low level of INTn generates an interrupt request</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_BOTH</name>
+                  <description>Any edge of INTn generates asynchronously an interrupt request</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_FALLING</name>
+                  <description>The falling edge of INTn generates asynchronously an interrupt request</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_RISING</name>
+                  <description>The rising edge of INTn generates asynchronously an interrupt request</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ISC2</name>
+              <description>External Interrupt 2 Sense Control Bits</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LVL_LOW</name>
+                  <description>The low level of INTn generates an interrupt request</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_BOTH</name>
+                  <description>Any edge of INTn generates asynchronously an interrupt request</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_FALLING</name>
+                  <description>The falling edge of INTn generates asynchronously an interrupt request</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_RISING</name>
+                  <description>The rising edge of INTn generates asynchronously an interrupt request</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ISC1</name>
+              <description>External Interrupt 1 Sense Control Bits</description>
+              <bitRange>[3:2]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LVL_LOW</name>
+                  <description>The low level of INTn generates an interrupt request</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_BOTH</name>
+                  <description>Any edge of INTn generates asynchronously an interrupt request</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_FALLING</name>
+                  <description>The falling edge of INTn generates asynchronously an interrupt request</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_RISING</name>
+                  <description>The rising edge of INTn generates asynchronously an interrupt request</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ISC0</name>
+              <description>External Interrupt 0 Sense Control Bits</description>
+              <bitRange>[1:0]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LVL_LOW</name>
+                  <description>The low level of INTn generates an interrupt request</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_BOTH</name>
+                  <description>Any edge of INTn generates asynchronously an interrupt request</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_FALLING</name>
+                  <description>The falling edge of INTn generates asynchronously an interrupt request</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_RISING</name>
+                  <description>The rising edge of INTn generates asynchronously an interrupt request</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EICRB</name>
+          <description>External Interrupt Control Register B</description>
+          <addressOffset>0x2e</addressOffset>
+
+          <fields>
+            <field>
+              <name>ISC6</name>
+              <description>External Interrupt 6 Sense Control Bits</description>
+              <bitRange>[5:4]</bitRange>
+              <writeConstraint>
+                <useEnumeratedValues>true</useEnumeratedValues>
+              </writeConstraint>
+                        
+
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>LVL_LOW</name>
+                  <description>The low level of INTn generates an interrupt request</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_BOTH</name>
+                  <description>Any edge of INTn generates asynchronously an interrupt request</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_FALLING</name>
+                  <description>The falling edge of INTn generates asynchronously an interrupt request</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EDGE_RISING</name>
+                  <description>The rising edge of INTn generates asynchronously an interrupt request</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>USB</name>
+      <description>USB Controller</description>
+      <baseAddress>0xd7</baseAddress>
+
+      <interrupt>
+        <name>USB_GEN</name>
+        <description>USB General Interrupt Request</description>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>USB_COM</name>
+        <description>USB Endpoint/Pipe Interrupt Communication Request</description>
+        <value>11</value>
+      </interrupt>
+
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x9</offset>
+        <size>0x7</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x11</offset>
+        <size>0xd</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+        <register>
+          <name>UHWCON</name>
+          <description>USB Hardware Control</description>
+          <addressOffset>0x0</addressOffset>
+
+          <fields>
+            <field>
+              <name>UVREGE</name>
+              <description>USB pad regulator enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>USBCON</name>
+          <description>USB Control</description>
+          <addressOffset>0x1</addressOffset>
+          <resetValue>0x20</resetValue>
+
+          <fields>
+            <field>
+              <name>USBE</name>
+              <description>USB macro Enable</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>FRZCLK</name>
+              <description>Freeze USB Clock</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>OTGPADE</name>
+              <description>VBUS Pad Enable</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>VBUSTE</name>
+              <description>VBUS Transition Interrupt Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>USBSTA</name>
+          <description>USB Status</description>
+          <addressOffset>0x2</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x02</resetValue>
+
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>ID Status (Always 1)</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>VBUS</name>
+              <description>VBus Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>USBINT</name>
+          <description>USB Interrupt</description>
+          <addressOffset>0x3</addressOffset>
+
+          <fields>
+            <field>
+              <name>VBUSTI</name>
+              <description>IVBUS Transition Interrupt Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDCON</name>
+          <description>USB Device Control</description>
+          <addressOffset>0x9</addressOffset>
+          <resetValue>0x01</resetValue>
+
+          <fields>
+            <field>
+              <name>RSTCPU</name>
+              <description>Reset CPU Bit</description>
+              <bitRange>[3:3]</bitRange>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>LSM</name>
+              <description>Low Speed Mode Selection</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>RMWKUP</name>
+              <description>Remote Wake-Up</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>DETACH</name>
+              <description>Detach Device</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDINT</name>
+          <description>USB Device Interrupt</description>
+          <addressOffset>0xa</addressOffset>
+
+          <fields>
+            <field>
+              <name>UPRSMI</name>
+              <description>Upstream Resume Interrupt Flag</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>EORSMI</name>
+              <description>End Of Resume Interrupt Flag</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>WAKEUPI</name>
+              <description>Wake-up CPU Interrupt Flag</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>EORSTI</name>
+              <description>End Of Reset Interrupt Flag</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>SOFI</name>
+              <description>Start Of Frame Interrupt Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>SUSPI</name>
+              <description>Suspend Interrupt Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDIEN</name>
+          <description>USB Device Interrupt Enable</description>
+          <addressOffset>0xb</addressOffset>
+
+          <fields>
+            <field>
+              <name>UPRSME</name>
+              <description>Upstream Resume Interrupt Enable</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>EORSME</name>
+              <description>End Of Resume Interrupt Enable</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>WAKEUPE</name>
+              <description>Wake-up CPU Interrupt Enable</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>EORSTE</name>
+              <description>End Of Reset Interrupt Enable</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>SOFE</name>
+              <description>Start Of Frame Interrupt Enable</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>SUSPE</name>
+              <description>Suspend Interrupt Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDADDR</name>
+          <description>USB Device Address</description>
+          <addressOffset>0xc</addressOffset>
+
+          <fields>
+            <field>
+              <name>ADDEN</name>
+              <description>Address Enable</description>
+              <bitRange>[7:7]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>UADD</name>
+              <description>USB Address</description>
+              <bitRange>[6:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDFNUML</name>
+          <description>USB Frame Number Low</description>
+          <addressOffset>0xd</addressOffset>
+          <access>read-only</access>
+
+          <fields>
+            <field>
+              <name>FNUM</name>
+              <description>Frame Number (Low Bits)</description>
+              <bitRange>[7:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDFNUMH</name>
+          <description>USB Frame Number High</description>
+          <addressOffset>0xe</addressOffset>
+          <access>read-only</access>
+
+          <fields>
+            <field>
+              <name>FNUM</name>
+              <description>Frame Number (High Bits)</description>
+              <bitRange>[2:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UDMFN</name>
+          <description>USB Frame Number CRC Error Flag</description>
+          <addressOffset>0xf</addressOffset>
+          <access>read-only</access>
+
+          <fields>
+            <field>
+              <name>FNCERR</name>
+              <description>Frame Number CRC Error Flag</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UEINTX</name>
+          <description>USB Endpoint Interrupt</description>
+          <addressOffset>0x11</addressOffset>
+
+          <fields>
+            <field>
+              <name>FIFOCON</name>
+              <description>FIFO Control Bit</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>NAKINI</name>
+              <description>NAK IN Received Interrupt Flag</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>RWAL</name>
+              <description>Read/Write Allowed Flag</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>NAKOUTI</name>
+              <description>NAK OUT Received Interrupt Flag</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>RXSTPI</name>
+              <description>Received Setup Interrupt Flag</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>RXOUTI</name>
+              <description>Received Out Data Interrupt Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>STALLEDI</name>
+              <description>STALLEDI Interrupt Flag</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TXINI</name>
+              <description>Transmitter Ready Interrupt Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UENUM</name>
+          <description>USB Endpoint Number</description>
+          <addressOffset>0x12</addressOffset>
+
+          <fields>
+            <field>
+              <name>EPNUM</name>
+              <description>Endpoint Number</description>
+              <bitRange>[2:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UERST</name>
+          <description>USB Endpoint Reset</description>
+          <addressOffset>0x13</addressOffset>
+
+          <fields>
+            <field>
+              <name>EPRST6</name>
+              <description>Endpoint 6 FIFO Reset</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>EPRST5</name>
+              <description>Endpoint 5 FIFO Reset</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>EPRST4</name>
+              <description>Endpoint 4 FIFO Reset</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>EPRST3</name>
+              <description>Endpoint 3 FIFO Reset</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>EPRST2</name>
+              <description>Endpoint 2 FIFO Reset</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>EPRST1</name>
+              <description>Endpoint 1 FIFO Reset</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>EPRST0</name>
+              <description>Endpoint 0 FIFO Reset</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UECONX</name>
+          <description>USB Endpoint Control</description>
+          <addressOffset>0x14</addressOffset>
+
+          <fields>
+            <field>
+              <name>STALLRQ</name>
+              <description>Stall Request Handshake</description>
+              <bitRange>[5:5]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>STALLRQC</name>
+              <description>Stall Request Clear Handshake</description>
+              <bitRange>[4:4]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>RSTDT</name>
+              <description>Reset Data Toggle</description>
+              <bitRange>[3:3]</bitRange>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>EPEN</name>
+              <description>Endpoint Enable</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UECFG0X</name>
+          <description>USB Endpoint Configuration 0</description>
+          <addressOffset>0x15</addressOffset>
+
+          <fields>
+            <field>
+              <name>EPTYPE</name>
+              <description>Endpoint Type</description>
+              <bitRange>[7:6]</bitRange>
+            </field>
+            <field>
+              <name>EPDIR</name>
+              <description>Endpoint Direction</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UECFG1X</name>
+          <description>USB Endpoint Configuration 1</description>
+          <addressOffset>0x16</addressOffset>
+
+          <fields>
+            <field>
+              <name>EPSIZE</name>
+              <description>Endpoint Size</description>
+              <bitRange>[6:4]</bitRange>
+            </field>
+            <field>
+              <name>EPBK</name>
+              <description>Endpoint Bank</description>
+              <bitRange>[3:2]</bitRange>
+            </field>
+            <field>
+              <name>ALLOC</name>
+              <description>Endpoint Allocation</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UESTA0X</name>
+          <description>USB Endpoint Status 0</description>
+          <addressOffset>0x17</addressOffset>
+          <access>read-only</access>
+
+          <fields>
+            <field>
+              <name>CFGOK</name>
+              <description>Configuration Status Flag</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>OVERFI</name>
+              <description>Overflow Error Interrupt Flag</description>
+              <bitRange>[6:6]</bitRange>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UNDERFI</name>
+              <description>Underflow Error Interrupt Flag</description>
+              <bitRange>[5:5]</bitRange>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DTSEQ</name>
+              <description>Data Toggle Sequencing Flag</description>
+              <bitRange>[3:2]</bitRange>
+            </field>
+            <field>
+              <name>NBUSYBK</name>
+              <description>Busy Bank Flag</description>
+              <bitRange>[1:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UESTA1X</name>
+          <description>USB Endpoint Status 1</description>
+          <addressOffset>0x18</addressOffset>
+          <access>read-only</access>
+
+          <fields>
+            <field>
+              <name>CTRLDIR</name>
+              <description>Control Direction Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>CURRBK</name>
+              <description>Current Bank Flag</description>
+              <bitRange>[1:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UEIENX</name>
+          <description>USB Endpoint Interrupt Enable</description>
+          <addressOffset>0x19</addressOffset>
+
+          <fields>
+            <field>
+              <name>FLERRE</name>
+              <description>Flow Error Interrupt Enable Flag</description>
+              <bitRange>[7:7]</bitRange>
+            </field>
+            <field>
+              <name>NAKINE</name>
+              <description>NAK IN Interrupt Enable Flag</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>NAKOUTE</name>
+              <description>NAK OUT Interrupt Enable Flag</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>RXSTPE</name>
+              <description>Received Setup Interrupt Enable Flag</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>RXOUTE</name>
+              <description>Received Out Data Interrupt Enable Flag</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>STALLEDE</name>
+              <description>Stalled Interrupt Enable Flag</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>TXINE</name>
+              <description>Transmitter Ready Interrupt Enable Flag</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UEDATX</name>
+          <description>USB Endpoint Data</description>
+          <addressOffset>0x1a</addressOffset>
+        </register>
+        <register>
+          <name>UEBCLX</name>
+          <description>USB Endpoint Byte Count Low</description>
+          <addressOffset>0x1b</addressOffset>
+          <access>read-only</access>
+        </register>
+        <register>
+          <name>UEBCHX</name>
+          <description>USB Endpoint Byte Count High</description>
+          <addressOffset>0x1c</addressOffset>
+          <access>read-only</access>
+
+          <fields>
+            <field>
+              <name>BYCT_H</name>
+              <description>Byte Count High Bits</description>
+              <bitRange>[2:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UEINT</name>
+          <description>USB Endpoint Interrupts</description>
+          <addressOffset>0x1d</addressOffset>
+
+          <fields>
+            <field>
+              <name>D6</name>
+              <description>Endpoint 6 Interrupt Bit</description>
+              <bitRange>[6:6]</bitRange>
+            </field>
+            <field>
+              <name>D5</name>
+              <description>Endpoint 5 Interrupt Bit</description>
+              <bitRange>[5:5]</bitRange>
+            </field>
+            <field>
+              <name>D4</name>
+              <description>Endpoint 4 Interrupt Bit</description>
+              <bitRange>[4:4]</bitRange>
+            </field>
+            <field>
+              <name>D3</name>
+              <description>Endpoint 3 Interrupt Bit</description>
+              <bitRange>[3:3]</bitRange>
+            </field>
+            <field>
+              <name>D2</name>
+              <description>Endpoint 2 Interrupt Bit</description>
+              <bitRange>[2:2]</bitRange>
+            </field>
+            <field>
+              <name>D1</name>
+              <description>Endpoint 1 Interrupt Bit</description>
+              <bitRange>[1:1]</bitRange>
+            </field>
+            <field>
+              <name>D0</name>
+              <description>Endpoint 0 Interrupt Bit</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>
