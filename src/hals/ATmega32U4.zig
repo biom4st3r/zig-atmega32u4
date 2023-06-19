@@ -2,6 +2,9 @@ const std = @import("std");
 const micro = @import("microzig");
 
 const unstable = micro.core.experimental.gpio;
+
+// All relavent addresses for referring to the port
+// Derived from datasheet
 fn Port(comptime io: u8) type {
     return struct {
         pub const io_port = io;
@@ -28,6 +31,7 @@ fn PortPin(comptime po: type, comptime pi: u3) type {
 }
 
 pub fn parse_pin(comptime spec: []const u8) type {
+    // Should be P[B-F][0-7] tho some of those don't exist
     if (spec.len != 3) @compileError("Pin Name to long to exist: " ++ spec);
     const PORT = spec[1];
     const PIN = std.fmt.parseInt(u3, &.{spec[2]}, 10) catch unreachable;
