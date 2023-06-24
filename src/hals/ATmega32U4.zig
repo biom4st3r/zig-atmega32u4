@@ -2,6 +2,25 @@ const std = @import("std");
 const micro = @import("microzig");
 
 const unstable = micro.core.experimental.gpio;
+// const T_SREG = micro.chip.types.peripherals.CPU.SREG;
+pub const T_SREG = packed struct(u8) {
+    I: u1, // Global interupt enable
+    T: u1, // Bit Copy Storage
+    H: u1, // Half Carry Falg
+    S: u1, // Sign Bit
+    V: u1, // Two Complement Overflow Flag
+    N: u1, // Negative Flag
+    Z: u1, // Zero Flag
+    C: u1, // Carry Flag
+};
+
+pub var SREG: *volatile T_SREG = @ptrFromInt(*T_SREG, 0x3F);
+
+pub const vector_base_address: usize = 0x0002;
+pub const vector_table: *[42]usize = @ptrFromInt(*[42]usize, vector_base_address);
+pub inline fn assign_vector(vector: u8, handler: *const fn () callconv(.C) void) void {
+    vector_table[vector - 1] = @intFromPtr(handler);
+}
 
 // All relavent addresses for referring to the port
 // Derived from datasheet
@@ -11,7 +30,7 @@ fn Port(comptime io: u8) type {
         pub const io_dir = io - 1;
         pub const io_pin = io - 2;
 
-        pub const mem = @intToPtr(*volatile u8, io_pin + 0x20);
+        pub const mem = @ptrFromInt(*volatile u8, io_pin + 0x20);
     };
 }
 
@@ -45,6 +64,46 @@ pub fn parse_pin(comptime spec: []const u8) type {
     }
 }
 
+pub const Time = struct {
+    const CYCLES_PER_MICRO = @divFloor(micro.board.clock_frequencies.cpu, 1_000_000);
+    inline fn cycles_to_micro(a: u32) u32 {
+        return @divFloor(a, CYCLES_PER_MICRO);
+    }
+    pub const MICROS_PER_T0_OVF = cycles_to_micro(64 * 256);
+    pub const MILLI_INCREMENT = @divFloor(MICROS_PER_T0_OVF, 1000);
+
+    pub const FRACT_INCREMENT = (MICROS_PER_T0_OVF % 1000) >> 3;
+    pub const FRACT_MAX = (1000 >> 3);
+
+    pub var timer0_overflow_count: u32 = 0;
+    pub var timer0_millis: u32 = 0;
+    pub var timer0_fract: u32 = 0;
+
+    pub fn millis() u32 {
+        var m: u32 = 0;
+        var old = micro.hal.SREG.*;
+        defer micro.hal.SREG.* = old;
+        micro.cpu.disable_interrupts();
+        m = timer0_millis;
+        return m;
+    }
+
+    pub fn delay(ms: u32, comptime busy: bool) void {
+        var ms_ = ms;
+        var start = Time.millis();
+        while (ms_ > 0) {
+            comptime if (!busy) {
+                suspend .{};
+            };
+            if (busy) asm volatile ("nop");
+            while ((ms_ > 0) and ((Time.millis() - start) >= 1)) {
+                ms_ -= 1;
+                start += 1;
+            }
+        }
+    }
+};
+
 pub const gpio = struct {
     pub fn setOutput(comptime pp: type) void {
         micro.cpu.sbi(pp.port.io_dir, pp.pin);
@@ -52,19 +111,17 @@ pub const gpio = struct {
     pub fn setInput(comptime pp: type) void {
         micro.cpu.cbi(pp.port.io_dir, pp.pin);
     }
-
     pub fn read(comptime pp: type) unstable.State {
         return if (pp.port.mem.* & (1 << pp.pin) != 0) .high else .low;
     }
-
     pub fn write(comptime pp: type, state: unstable.State) void {
         if (state == .high) {
+            // @compileLog(pp);
             micro.cpu.sbi(pp.port.io_port, pp.pin);
         } else {
             micro.cpu.cbi(pp.port.io_port, pp.pin);
         }
     }
-
     pub fn toggle(comptime pp: type) void {
         micro.cpu.sbi(pp.port.io_pin, pp.pin);
     }

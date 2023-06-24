@@ -45,13 +45,17 @@ pub fn build(b: *std.build.Builder) void {
         },
         .optimize = optimize,
     });
+    exe.inner.emit_asm = .emit;
     exe.installArtifact(b);
 
     //    const bin = exe.inner.installed_path.? ++ exe.inner.out_filename;
-
+    // stty -F /dev/ttyACM0 1200 cs8 -cstopb -parenb
+    const PORT = "/dev/ttyACM0";
     const upload = b.step("upload", "Upload the code via avrdude");
-    const force_bootloader = b.addSystemCommand(&.{ "stty", "-F", "/dev/ttyACM0", "1200", "cs8", "-cstopb", "-parenb" });
-    const avrwrite = b.addSystemCommand(&.{ "avrdude", "-p", "m32u4", "-c", "avr109", "-P", "/dev/ttyACM0", "-U", "flash:w:zig-out/bin/main.hex" });
+    const avrwrite = b.addSystemCommand(&.{ "avrdude", "-p", "m32u4", "-c", "avr109", "-P", PORT, "-U", "flash:w:zig-out/bin/ATmega32U4.minimal" });
+    // const sleep = b.addSystemCommand(&.{ "sleep", "1" });
+
+    const force_bootloader = b.addSystemCommand(&.{ "stty", "-F", PORT, "1200", "cs8", "-cstopb", "-parenb" });
 
     upload.dependOn(&force_bootloader.step);
     force_bootloader.step.dependOn(&avrwrite.step);
