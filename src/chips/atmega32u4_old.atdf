@@ -3,8 +3,8 @@
   <variants>
     <variant ordercode="ATmega32U4-AU" tempmin="-40" tempmax="85" speedmax="16000000" pinout="TQFP44" package="TQFP44" vccmin="2.7" vccmax="5.5"/>
     <variant ordercode="ATmega32U4RC-AU" tempmin="-40" tempmax="85" speedmax="16000000" pinout="TQFP44" package="TQFP44" vccmin="2.7" vccmax="5.5"/>
-    <variant ordercode="ATmega32U4-MU" tempmin="-40" tempmax="85" speedmax="16000000" pinout="QFN44" package="QFN44"  vccmin="2.7" vccmax="5.5"/>
-    <variant ordercode="ATmega32U4RC-MU" tempmin="-40" tempmax="85" speedmax="16000000" pinout="QFN44" package="QFN44"  vccmin="2.7" vccmax="5.5"/>
+    <variant ordercode="ATmega32U4-MU" tempmin="-40" tempmax="85" speedmax="16000000" pinout="QFN44" package="QFN44" vccmin="2.7" vccmax="5.5"/>
+    <variant ordercode="ATmega32U4RC-MU" tempmin="-40" tempmax="85" speedmax="16000000" pinout="QFN44" package="QFN44" vccmin="2.7" vccmax="5.5"/>
   </variants>
   <devices>
     <device name="ATmega32U4" architecture="AVR8" family="megaAVR">
@@ -249,6 +249,9 @@
             <signals>
               <signal group="CLK" index="0" function="default" pad="PC7"/>
             </signals>
+            <parameters>
+              <param name="CORE_VERSION" value="V3"/>
+            </parameters>
           </instance>
         </module>
         <module name="PLL">
@@ -1224,9 +1227,7 @@
       <value-group caption="Oscillator Calibration Values" name="OSCCAL_VALUE_ADDRESSES">
         <value value="0x00" caption="8.0 MHz" name="8_0_MHz"/>
       </value-group>
-      <parameters>
-        <param name="CORE_VERSION" value="V3"/>
-      </parameters>
+
     </module>
     <module caption="Phase Locked Loop" name="PLL">
       <register-group caption="Phase Locked Loop" name="PLL">

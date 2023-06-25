@@ -1,26 +1,20 @@
 const std = @import("std");
 const micro = @import("microzig");
+const USART1 = micro.chip.types.peripherals.USART.USART1;
 
 const unstable = micro.core.experimental.gpio;
-// const T_SREG = micro.chip.types.peripherals.CPU.SREG;
-pub const T_SREG = packed struct(u8) {
-    I: u1, // Global interupt enable
-    T: u1, // Bit Copy Storage
-    H: u1, // Half Carry Falg
-    S: u1, // Sign Bit
-    V: u1, // Two Complement Overflow Flag
-    N: u1, // Negative Flag
-    Z: u1, // Zero Flag
-    C: u1, // Carry Flag
-};
-
-pub var SREG: *volatile T_SREG = @ptrFromInt(*T_SREG, 0x3F);
 
 pub const vector_base_address: usize = 0x0002;
 pub const vector_table: *[42]usize = @ptrFromInt(*[42]usize, vector_base_address);
 pub inline fn assign_vector(vector: u8, handler: *const fn () callconv(.C) void) void {
     vector_table[vector - 1] = @intFromPtr(handler);
 }
+
+pub const clock = struct {
+    pub const Domain = enum {
+        cpu,
+    };
+};
 
 // All relavent addresses for referring to the port
 // Derived from datasheet
@@ -126,3 +120,119 @@ pub const gpio = struct {
         micro.cpu.sbi(pp.port.io_pin, pp.pin);
     }
 };
+
+pub const uart = struct {
+    pub const DataBits = enum {
+        five,
+        six,
+        seven,
+        eight,
+        nine,
+    };
+
+    pub const StopBits = enum {
+        one,
+        two,
+    };
+
+    pub const Parity = enum {
+        odd,
+        even,
+    };
+};
+
+pub fn Uart(comptime index: usize, comptime pins: micro.core.experimental.uart.Pins) type {
+    if (index != 0) @compileError("Atmega328p only has a single uart!");
+    if (pins.tx != null or pins.rx != null)
+        @compileError("Atmega328p has fixed pins for uart!");
+
+    return struct {
+        const Self = @This();
+
+        fn computeDivider(baud_rate: u32) !u12 {
+            const pclk = micro.core.experimental.clock.get().cpu;
+            const divider = ((pclk + (8 * baud_rate)) / (16 * baud_rate)) - 1;
+
+            return std.math.cast(u12, divider) orelse return error.UnsupportedBaudRate;
+        }
+
+        fn computeBaudRate(divider: u12) u32 {
+            return micro.core.experimental.clock.get().cpu / (16 * @as(u32, divider) + 1);
+        }
+
+        pub fn init(config: micro.core.experimental.uart.Config) !Self {
+            const ucsz: u3 = switch (config.data_bits) {
+                .five => 0b000,
+                .six => 0b001,
+                .seven => 0b010,
+                .eight => 0b011,
+                .nine => return error.UnsupportedWordSize, // 0b111
+            };
+
+            const upm: u2 = if (config.parity) |parity| switch (parity) {
+                .even => @as(u2, 0b10), // even
+                .odd => @as(u2, 0b11), // odd
+            } else 0b00; // parity disabled
+
+            const usbs: u1 = switch (config.stop_bits) {
+                .one => 0b0,
+                .two => 0b1,
+            };
+
+            const umsel: u2 = 0b00; // Asynchronous USART
+
+            // baud is computed like this:
+            //             f(osc)
+            // BAUD = ----------------
+            //        16 * (UBRRn + 1)
+
+            const ubrr_val = try computeDivider(config.baud_rate);
+
+            USART1.UCSR1A.modify(.{
+                .MPCM0 = 0,
+                .U2X0 = 0,
+            });
+            USART1.UCSR1B.write(.{
+                .TXB80 = 0, // we don't care about these btw
+                .RXB80 = 0, // we don't care about these btw
+                .UCSZ02 = @truncate(u1, (ucsz & 0x04) >> 2),
+                .TXEN0 = 1,
+                .RXEN0 = 1,
+                .UDRIE0 = 0, // no interrupts
+                .TXCIE0 = 0, // no interrupts
+                .RXCIE0 = 0, // no interrupts
+            });
+            USART1.UCSR1C.write(.{
+                .UCPOL0 = 0, // async mode
+                .UCSZ0 = @truncate(u2, (ucsz & 0x03) >> 0),
+                .USBS0 = usbs,
+                .UPM0 = upm,
+                .UMSEL0 = umsel,
+            });
+
+            USART1.UBRR1.modify(ubrr_val);
+
+            return Self{};
+        }
+
+        pub fn canWrite(self: Self) bool {
+            _ = self;
+            return (USART1.UCSR1A.read().UDRE0 == 1);
+        }
+
+        pub fn tx(self: Self, ch: u8) void {
+            while (!self.canWrite()) {} // Wait for Previous transmission
+            USART1.UDR1.* = ch; // Load the data to be transmitted
+        }
+
+        pub fn canRead(self: Self) bool {
+            _ = self;
+            return (USART1.UCSR1A.read().RXC0 == 1);
+        }
+
+        pub fn rx(self: Self) u8 {
+            while (!self.canRead()) {} // Wait till the data is received
+            return USART1.UDR1.*; // Read received data
+        }
+    };
+}
