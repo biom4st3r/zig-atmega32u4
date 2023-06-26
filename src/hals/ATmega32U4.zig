@@ -1,18 +1,37 @@
 const std = @import("std");
 const micro = @import("microzig");
-const USART1 = micro.chip.types.peripherals.USART.USART1;
+const USART1 = micro.chip.peripherals.USART1;
 
 const unstable = micro.core.experimental.gpio;
 
-pub const vector_base_address: usize = 0x0002;
-pub const vector_table: *[42]usize = @ptrFromInt(*[42]usize, vector_base_address);
-pub inline fn assign_vector(vector: u8, handler: *const fn () callconv(.C) void) void {
-    vector_table[vector - 1] = @intFromPtr(handler);
-}
+// pub const vector_base_address: usize = 0x0002;
+// pub const vector_table: *[42]usize = @ptrFromInt(*[42]usize, vector_base_address);
+// pub inline fn assign_vector(vector: u8, handler: *const fn () callconv(.C) void) void {
+//     vector_table[vector - 1] = @intFromPtr(handler);
+// }
 
 pub const clock = struct {
     pub const Domain = enum {
         cpu,
+    };
+};
+
+pub const microzig_options = struct {
+    pub const interupts = struct {
+        pub fn TIMER0_OVF() void {
+            var mills: u32 = Time.timer0_millis;
+            var fract: u32 = Time.timer0_fract;
+            mills += Time.MILLI_INCREMENT;
+            fract += Time.FRACT_INCREMENT;
+            if (fract > Time.FRACT_MAX) {
+                fract -= Time.FRACT_MAX;
+                mills += 1;
+            }
+            // Do I need to do this?
+            @as(*volatile u32, &Time.timer0_fract).* = fract;
+            @as(*volatile u32, &Time.timer0_millis).* = mills;
+            @as(*volatile u32, &Time.timer0_overflow_count).* += 1;
+        }
     };
 };
 
@@ -189,40 +208,42 @@ pub fn Uart(comptime index: usize, comptime pins: micro.core.experimental.uart.P
             const ubrr_val = try computeDivider(config.baud_rate);
 
             USART1.UCSR1A.modify(.{
-                .MPCM0 = 0,
-                .U2X0 = 0,
+                .MPCM1 = 0,
+                .U2X1 = 0,
             });
             USART1.UCSR1B.write(.{
-                .TXB80 = 0, // we don't care about these btw
-                .RXB80 = 0, // we don't care about these btw
-                .UCSZ02 = @truncate(u1, (ucsz & 0x04) >> 2),
-                .TXEN0 = 1,
-                .RXEN0 = 1,
-                .UDRIE0 = 0, // no interrupts
-                .TXCIE0 = 0, // no interrupts
-                .RXCIE0 = 0, // no interrupts
+                .TXB81 = 0, // we don't care about these btw
+                .RXB81 = 0, // we don't care about these btw
+                .UCSZ12 = @truncate(u1, (ucsz & 0x04) >> 2),
+                .TXEN1 = 1,
+                .RXEN1 = 1,
+                .UDRIE1 = 0, // no interrupts
+                .TXCIE1 = 0, // no interrupts
+                .RXCIE1 = 0, // no interrupts
             });
             USART1.UCSR1C.write(.{
-                .UCPOL0 = 0, // async mode
-                .UCSZ0 = @truncate(u2, (ucsz & 0x03) >> 0),
-                .USBS0 = usbs,
-                .UPM0 = upm,
-                .UMSEL0 = umsel,
+                .UCPOL1 = 0, // async mode
+                .UCSZ1 = @truncate(u2, (ucsz & 0x03) >> 0),
+                .USBS1 = .{ .raw = usbs },
+                .UPM1 = .{ .raw = upm },
+                .UMSEL1 = .{ .raw = umsel },
             });
 
-            USART1.UBRR1.modify(ubrr_val);
+            // USART1.UBRR1.modify(ubrr_val);
+            USART1.UBRR1 = @intCast(u16, ubrr_val);
 
             return Self{};
         }
 
         pub fn canWrite(self: Self) bool {
             _ = self;
-            return (USART1.UCSR1A.read().UDRE0 == 1);
+            return (USART1.UCSR1A.read().UDRE1 == 1);
         }
 
         pub fn tx(self: Self, ch: u8) void {
             while (!self.canWrite()) {} // Wait for Previous transmission
-            USART1.UDR1.* = ch; // Load the data to be transmitted
+            // USART1.UDR0.* = ch; // Load the data to be transmitted
+            USART1.UDR1 = ch; // Load the data to be transmitted
         }
 
         pub fn canRead(self: Self) bool {
