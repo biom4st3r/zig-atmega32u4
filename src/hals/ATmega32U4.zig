@@ -3,6 +3,7 @@ const micro = @import("microzig");
 const USART1 = micro.chip.peripherals.USART1;
 
 const unstable = micro.core.experimental.gpio;
+const usb = micro.core.usb;
 
 // pub const vector_base_address: usize = 0x0002;
 // pub const vector_table: *[42]usize = @ptrFromInt(*[42]usize, vector_base_address);
@@ -15,6 +16,32 @@ pub const clock = struct {
         cpu,
     };
 };
+
+pub const usbimpl = struct {
+    fn usb_init_clk() void {}
+    fn usb_init_device(config: *usb.DeviceConfiguration) void {
+        _ = config;
+    }
+    fn usb_start_tx(endpoint: *usb.EndpointConfiguration, data: []const u8) void {
+        _ = data;
+        _ = endpoint;
+    }
+    fn usb_start_rx(endpoint_config: *usb.EndpointConfiguration, n: usize) void {
+        _ = n;
+        _ = endpoint_config;
+    }
+    fn get_interrupts() usb.InterruptStatus {}
+    fn get_setup_packet() usb.SetupPacket {}
+    fn bus_reset() void {}
+    fn set_address(addr: u7) void {
+        _ = addr;
+    }
+    fn get_EPBIter(config: *const usb.DeviceConfiguration) usb.EPBIter {
+        _ = config;
+    }
+};
+
+pub const default_uart = micro.hal.Uart(0, .{ .tx = null, .rx = null });
 
 pub const microzig_options = struct {
     pub const interupts = struct {

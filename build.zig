@@ -53,11 +53,13 @@ pub fn build(b: *std.build.Builder) void {
     const PORT = "/dev/ttyACM0";
     const upload = b.step("upload", "Upload the code via avrdude");
     const avrwrite = b.addSystemCommand(&.{ "avrdude", "-p", "m32u4", "-c", "avr109", "-P", PORT, "-U", "flash:w:zig-out/bin/ATmega32U4.minimal" });
-    // const sleep = b.addSystemCommand(&.{ "sleep", "1" });
+    const sleep = b.addSystemCommand(&.{ "sleep", "3" });
 
     const force_bootloader = b.addSystemCommand(&.{ "stty", "-F", PORT, "1200", "cs8", "-cstopb", "-parenb" });
 
-    upload.dependOn(&force_bootloader.step);
-    force_bootloader.step.dependOn(&avrwrite.step);
+    upload.dependOn(&avrwrite.step);
     avrwrite.step.dependOn(&exe.inner.step);
+    avrwrite.step.dependOn(&sleep.step);
+    sleep.step.dependOn(&force_bootloader.step);
+    // force_bootloader.step.dependOn(&sleep.step);
 }
