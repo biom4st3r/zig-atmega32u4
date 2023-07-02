@@ -22,21 +22,25 @@ pub const usbimpl = struct {
         const UD: micro.chip.types.peripherals.USB_DEVICE = micro.chip.peripherals.USB_DEVICE;
         // Enable USB macro, VBUS PAD, VBUS Transition interupt
         // Disable Freeze USB Clock bit
-        UD.USBCON.modify(.{ .USBE = 1, .FRZCLK = 0, .VBUSTE = 1, .OTGPADE = 1 });
+        UD.USBCON.modify(.{ .FRZCLK = 0, .VBUSTE = 1, .OTGPADE = 1 });
 
         const PLL: micro.chip.types.peripherals.PLL = micro.chip.peripherals.PLL;
         const full_speed: bool = micro.board.clock_frequencies.cpu == micro.board.@"16Mhz".cpu;
+        // Configure PLL
         if (full_speed) {
-            //
-            PLL.PLLFRQ.modify(.{
-                .PINMUX = 0,
-            });
-        } else PLL.PLLFRQ.modify(.{
-            .PINMUX = 1,
-        });
+            PLL.PLLFRQ.modify(.{ .PINMUX = 0, .PLLUSB = 1, .PLLTM = 0b10, .PDIV = 0b1010 });
+        } else PLL.PLLFRQ.modify(.{ .PINMUX = 1, .PLLUSB = 0, .PLLTM = 0b11, .PDIV = 0b0100 });
+        // I'm not so sure about the freq and DIV on 8mhz mode
 
         // Enable PLL
+        PLL.PLLCSR.modify(.{ .PINDIV = if (full_speed) 1 else 0 });
         PLL.PLLCSR.modify(.{ .PLLE = 1 });
+        // Check PLL LOCK
+        while (PLL.PLLCSR.raw.PLOCK == 0) {}
+        // Enable USB Interface
+        UD.USBCON.modify(.{
+            .USBE = 1,
+        });
     }
     fn usb_init_device(config: *usb.DeviceConfiguration) void {
         _ = config;
