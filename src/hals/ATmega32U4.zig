@@ -16,9 +16,28 @@ pub const clock = struct {
         cpu,
     };
 };
-
+// https://ww1.microchip.com/downloads/en/devicedoc/atmel-7766-8-bit-avr-atmega16u4-32u4_datasheet.pdf
 pub const usbimpl = struct {
-    fn usb_init_clk() void {}
+    fn usb_init_clk() void {
+        const UD: micro.chip.types.peripherals.USB_DEVICE = micro.chip.peripherals.USB_DEVICE;
+        // Enable USB macro, VBUS PAD, VBUS Transition interupt
+        // Disable Freeze USB Clock bit
+        UD.USBCON.modify(.{ .USBE = 1, .FRZCLK = 0, .VBUSTE = 1, .OTGPADE = 1 });
+
+        const PLL: micro.chip.types.peripherals.PLL = micro.chip.peripherals.PLL;
+        const full_speed: bool = micro.board.clock_frequencies.cpu == micro.board.@"16Mhz".cpu;
+        if (full_speed) {
+            //
+            PLL.PLLFRQ.modify(.{
+                .PINMUX = 0,
+            });
+        } else PLL.PLLFRQ.modify(.{
+            .PINMUX = 1,
+        });
+
+        // Enable PLL
+        PLL.PLLCSR.modify(.{ .PLLE = 1 });
+    }
     fn usb_init_device(config: *usb.DeviceConfiguration) void {
         _ = config;
     }

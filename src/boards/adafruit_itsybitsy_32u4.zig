@@ -1,12 +1,12 @@
-pub const clock_frequencies0 = .{
+pub const @"16Mhz" = .{
     .cpu = 16_000_000,
 };
 
-pub const clock_frequencies1 = .{
+pub const @"8Mhz" = .{
     .cpu = 8_000_000,
 };
 
-pub const clock_frequencies = clock_frequencies0;
+pub var clock_frequencies = @"16Mhz";
 
 pub const pin_map = .{
     .A0 = "PF7",

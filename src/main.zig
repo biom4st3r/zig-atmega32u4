@@ -3,7 +3,8 @@ const unstable = micro.core.experimental;
 const std = @import("std");
 const hal = micro.hal;
 const Time = hal.Time;
-// const peri = @import("chips/ATmega32U4.zig").devices.ATmega32U4.peripherals; //micro.chip.peripherals;
+//micro.chip.peripherals;
+// const peri = if (false) @import("chips/ATmega32U4.zig").devices.ATmega32U4.peripherals else void;
 
 //https://zeg.random-projects.net/getting-started.htm
 //https://github.com/ZigEmbeddedGroup/microzig/blob/main/test/programs/blinky.zig
@@ -12,10 +13,18 @@ const Time = hal.Time;
 // pub const microzig_options = hal.microzig_options;
 
 pub fn main() !void {
+
     // var uart = hal.default_uart.init(.{ .baud_rate = 9600 });
-    const led_pin = unstable.Pin("D13");
-    const led = unstable.gpio.Gpio(led_pin, .{ .mode = .output, .initial_state = .low });
+    const led = unstable.gpio.Gpio(unstable.Pin("D13"), .{ .mode = .output, .initial_state = .low });
     led.init();
+    // const d12 = unstable.gpio.Gpio(unstable.Pin("D12"), .{ .mode = .output, .initial_state = .low });
+    // d12.init();
+    // const d11 = unstable.gpio.Gpio(unstable.Pin("D11"), .{ .mode = .output, .initial_state = .low });
+    // d11.init();
+    // const d10 = unstable.gpio.Gpio(unstable.Pin("D10"), .{ .mode = .output, .initial_state = .low });
+    // d10.init();
+    // const d9 = unstable.gpio.Gpio(unstable.Pin("D9"), .{ .mode = .output, .initial_state = .low });
+    // d9.init();
 
     while (true) {
         // for ("Hello World!\n") |char| {
@@ -30,8 +39,8 @@ pub fn main() !void {
     }
 }
 
-fn busyloop() void {
-    const limit = 1_000_000;
+inline fn busyloop() void {
+    const limit = 8_000_000;
     var i: u24 = 0;
     while (i < limit) : (i += 1) {
         // @import("std").mem.doNotOptimizeAway(i);

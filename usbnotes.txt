@@ -1,0 +1,165 @@
+Power On the USB interface
+- Power-On USB pads regulator
+- Configure PLL interface
+- Enable PLL
+- Check PLL lock
+- Enable USB interface
+- Configure USB interface (USB speed, Endpoints configuration...)
+- Wait for USB VBUS information connection
+- Attach USB device
+Power Off the USB interface
+- Detach USB interface
+- Disable USB interface
+- Disable PLL
+- Disable USB pad regulator
+Suspending the USB interface
+- Clear Suspend Bit
+- Freeze USB clock
+- Disable PLL
+- Be sure to have interrupts enable to exit sleep mode
+- Make the MCU enter sleep mode
+Resuming the USB interface
+- Enable PLL
+- Wait PLL lock
+- Unfreeze USB clock
+- Clear Resume information
+
+USB General Registers
+_________________
+|7|6|5|4|3|2|1|0|
+|---------------|
+- UHWCON
+-- 7-1 reserved
+-- 0 UVREGE Pad Regulator Enable. 1/0 enable/disable
+
+- USBCON
+-- 7 USBE. Macro Enable Bit. enable usb controller. clear to disable&reset controller.
+-- 6 reserved
+-- 5 FRZCLK Freeze USB Clock bit. disable clock input. improve power consumption
+-- 4 OTGPADE VBUS pad Enable
+-- 3-1 reserved
+-- 0 VBUSTE VBus Transition Interrupt enable bit.
+
+- USBSTA
+-- 7-2 reserved
+-- 1 ID. ID status. legacy compat with at90usb64/128. Always 1
+-- 0 VBUS. VBUS Flag. monitor the state of usb connection. Check pg256"plugin-detect" for more info
+
+- USBINT
+-- 7-1 reserved
+-- 0 VBUSTI. IVBUS Transition intrrupt Flag. Set when a transition 1<->0 on vbus pad. Cleared by software. pg266 usb software operating modes
+
+- Endpoint 0:programmable size FIFO up to 64 bytes, default control endpoint
+- Endpoints 1 programmable size FIFO up to 256 bytes in ping-pong mode
+- Endpoints 2 to 6: programmable size FIFO up to 64 bytes in ping-pong mode
+
+
+- Endpoint Selection
+-- Prior to any operation performed by the CPU, the endpoint must first be selected. This is done by setting the
+EPNUM2:0 bits (UENUM register)
+
+- Address Setup
+-- responds at address 0
+-- Host sends a SETUP
+-- handle the request and record the addresss in UADD but keep ADDEN cleared
+-- sendan IN command of 0 bytes(zero length packet)
+-- enable usb device address by settin ADDEN
+-- UADD and ADDEN cannot be written at the same time
+-- ADDEN is cleared automatically: power-up reset, usb reset recved, macro is cleared(USBE is set)
+
+
+- UDCON
+-- 7-4 reserved
+-- 3 RSTCPU. USB Reset CPU bit. Set this bit to 1 by firmware in order to reset the CPU on the detection of a USB End of Reset signal
+-- 2 LSM. USB Device Low Speed Mode Selection. 0 for high-speed, 1 for low-speed
+-- 1 RMWKUP. Remote Wakeup-bit. set to send "upstream-resume" to host for wakeup(SUSPI Bit must be set). Automatically cleared by hardware. software clear does nothing
+-- 0 DETATCH. Detatch Bit. Physically detach the device(disables D+ and D-)
+
+
+- UDINT
+-- 7 reserved
+-- 6 UPRSMI. Upstream resume intrrupt flag. set by hardware on "Upstream Resume". Cleared by software(Clocks must be enabled before).
+-- 5 EORSMI. End of Resume Intrttupt Flag. set by hardware on "End Of Resume". triggers USB interrupt if EORSME is set. Cleared by software
+-- 4 WAKEUPI. Wake-up CPU interrupt flag. Set by hardware when USB controller reactivated. Intrupts if WAKEUPE is set. CLeared by software(USB clock inputs must be enabled before).
+-- 3 EORSTI. End of Reset Intretupt Flag. set by hardware on "End of Reset".triggers Intrupt if EORSTE. cleared by software.
+-- 2 SOFI. Start of Frame Intrrupt. Set by hardware on "Start of Frame" PID. Triggers intrupt if SOFE
+-- 1 Reserved
+-- 0 SUSPI. Suspend interrupt flag. Cleared by software. interrupt bits are set even if their enable bits are not.
+
+
+- UDIEN
+-- 7 reserved
+-- 6 UPRSME. Upstream Resume Interrupt Enable Bit
+-- 5 EORSME. End Of Resume Interrupt Enable Bit
+-- 4 WAKEUPE. Wake-up CPU Interrupt Enable Bit
+-- 3 EORSTE. End Of Reset Interrupt Enable Bit
+-- 2 SOFE. Start Of Frame Interrupt Enable Bit
+-- 1 reserved
+-- 0 SUSPE. Suspend Interrupt Enable Bit
+
+
+- UDADDR
+-- 7 ADDEN. cleared by hardware. set after address is set
+-- 6-0 UADD. Usb addresss bits
+
+
+- UDFNUMH
+-- 7-3 reserved
+-- 2-0 FNUM10:8. Frame number Upper Value. Set by hardware 3 MSB of 11-bit frame number info. updated even on corrupted SOF
+
+
+- UDFNUML
+-- 7-0 FNUM7:0. Frame Number Lower Value. 8 LSB of 11-bit frame number
+
+
+- UDMFN
+-- 7-5 reserved
+-- 4 FNCERR. Frame number CRC error flag. Set by hardware. when corrupted frame number is received frrom SOF packet.
+-- 3-0 reserved
+
+
+- UENUM
+-- 7-3 reserved
+-- 2-0 EPNUM2:0. Endpoint number bits. Load by software to select endpoint to be targeted by cpu. 111b if forbidden
+
+
+- UERST
+-- 7 reserved
+-- 6-0 EPRST. Endpoint FIFO Reset bits. Set to reset selected endpoint FIFO prior to any other operation when reset. clear by software to complete reset operation an start using endpoint.
+
+
+- UECONX
+-- 7-6 reserved
+-- 5 STALLRQ - Stall request handshake bit
+TODO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
